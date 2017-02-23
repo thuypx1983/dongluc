@@ -33,6 +33,12 @@ class news extends base
 			default: case "list": 
 				$this->showList(); 
 				break;
+            default: case "highlight_left":
+				$this->highlight_left();
+				break;
+            default: case "highlight_right":
+				$this->highlight_right();
+				break;
 		}
 	}	
 	
@@ -399,6 +405,32 @@ class news extends base
 		}
 		return $page;
 	}
+
+    ////////////////////////////////////////////
+    //added by thuypx
+    ////////////////////////////////////////////
+
+    function highlight_left(){
+        $rows = $this->db->getAll("
+			SELECT id, concat('{$this->pre}', '/', link) as pre_link, title, photo FROM {$this->table}
+			{$this->where} AND is_top = 1
+			{$this->order}
+			LIMIT 0,1
+		");
+        $this->smarty->assign("rows", $rows);
+        $this->smarty->display("highlight_left.tpl");
+    }
+    function highlight_right(){
+        $rows = $this->db->getAll("
+			SELECT id, concat('{$this->pre}', '/', link) as pre_link, title, photo FROM {$this->table}
+			{$this->where} AND is_top = 1
+			{$this->order}
+			LIMIT 1,5
+		");
+        $this->smarty->assign("rows", $rows);
+
+        $this->smarty->display("highlight_right.tpl");
+    }
 }
 
 ?>

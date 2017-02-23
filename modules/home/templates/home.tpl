@@ -1,5 +1,9 @@
 <!-- <div class="grid1060"> -->
 {loadModule mod=ads task=home}
+<div class="news-highlight">
+    {loadModule mod=news task=highlight_left}
+    {loadModule mod=news task=highlight_right}
+</div>
 <div class="grid94p">
 
     <div class="content_home pkg">
