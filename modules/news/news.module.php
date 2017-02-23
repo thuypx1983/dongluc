@@ -42,6 +42,9 @@ class news extends base
             default: case "news_block_sport":
 				$this->news_block_sport();
 				break;
+            default: case "news_service":
+				$this->news_service();
+				break;
 		}
 	}	
 	
@@ -444,6 +447,16 @@ class news extends base
 		");
         $this->smarty->assign("rows", $rows);
         $this->smarty->display("news_block_sport.tpl");
+    }
+    function news_service(){
+        $rows = $this->db->getAll("
+			SELECT id, concat('{$this->pre}', '/', link) as pre_link, title, photo,description FROM {$this->table}
+			{$this->where} AND `news_category_id`=3
+			{$this->order}
+			LIMIT 0,20
+		");
+        $this->smarty->assign("rows", $rows);
+        $this->smarty->display("news_service.tpl");
     }
 }
 

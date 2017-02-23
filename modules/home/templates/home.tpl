@@ -8,6 +8,10 @@
     {loadModule mod=news task=news_block_sport}
     {loadModule mod=product task=slider_left}
 </div>
+
+<div class="news-service">
+    {loadModule mod=news task=news_service}
+</div>
 <div class="grid94p">
 
     <div class="content_home pkg">
