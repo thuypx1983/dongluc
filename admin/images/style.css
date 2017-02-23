@@ -1,0 +1,64 @@
+/* CSS Document */
+
+img { border:none;}
+
+body
+{
+	background:url(bg_inner.png) repeat-x left top #fff;
+	line-height:18px;
+	padding:0;
+	margin:0;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#wrapper {
+	margin:auto; 
+	width:99%; 
+	border:0px solid #fff;
+}
+
+.admin_logo
+{
+	width:140px;
+	margin-top:6px;
+}
+
+#menu_bar 
+{
+	height:32px;
+	margin-top:4px;
+
+}
+
+a
+{
+	text-decoration: none;
+}
+
+.col_left
+{
+	width: 100px;
+	/*text-align: right;*/
+}
+.col_right
+{
+	text-align: left;
+}
+
+ul.menu {list-style:none; margin:0; padding:0; height:32px;}
+ul.menu * {margin:0; padding:0;  text-align: left;}
+ul.menu a {display:block; color:#fff; text-decoration:none; }
+ul.menu li {position:relative; float:left; margin-right:2px; }
+ul.menu ul {position:absolute; top:30px; left:0; display:none; opacity:0; list-style:none;  margin-top:-2px;}
+ul.menu ul li {position:relative; border:1px solid #999966; border-top: none; width:148px; margin:0;}
+ul.menu ul li a {display:block; padding:3px 7px 5px; background-color:#575757;}
+ul.menu ul li a:hover {background-color:#fcfcfc; color:#000;}
+ul.menu ul ul {left:148px; top:-1px}
+ul.menu .menulink0 {padding:4px 10px 6px 0; font-weight:normal; }
+ul.menu .menulink0:hover {color:#b8f044;}
+ul.menu .menulink {padding:4px 10px 6px; font-weight:normal;}
+ul.menu .menulink:hover, ul.menu .menuhover {color:#b8f044;}
+ul.menu .sub {background:#ffcc66 url(arrow.gif) 136px 8px no-repeat; text-align: left;}
+ul.menu .topline {border-top:1px solid #999966}
+
+

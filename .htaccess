@@ -1,0 +1,56 @@
+RewriteEngine on
+ErrorDocument 404 /dongluc/index.php?mod=error
+#RewriteCond %{HTTP_HOST} ^dongluc.vn$ [OR]
+#RewriteCond %{HTTP_HOST} ^www.dongluc.vn$
+#RewriteRule (.*)$ http://dongluc.vn/$1 [R=301,L]
+#RewriteBase /
+# dang ky email
+RewriteRule ^dang-ky-nhan-tin/(.*)$ index.php?mod=subcribe&f=$1 [L]
+# don hang cua ban
+RewriteRule ^don-hang.html$ index.php?mod=user&task=history [L]
+# thong tin ca nhan
+RewriteRule ^thong-tin-ca-nhan.html$ index.php?mod=user&task=update_profile [L]
+# dang nhap
+RewriteRule ^dang-nhap.html$ index.php?mod=user&task=register [L]
+# thanh toan
+RewriteRule ^thanh-toan.html$ index.php?mod=product&task=cart_save [L]
+# gio hang
+RewriteRule ^gio-hang.html$ index.php?mod=product&task=cart_view [L]
+# lien he
+RewriteRule ^lien-he.html$ index.php?mod=contact [L]
+# showroom
+RewriteRule ^showroom/(.*)-([0-9]+).html$ index.php?mod=showroom&task=detail&link=$1&id=$2 [L]
+RewriteRule ^showroom/(.*)-([0-9]+)/$ index.php?mod=showroom&task=list&region=$1&id=$2 [L]
+RewriteRule ^showroom/$ index.php?mod=showroom&task=list [L]
+# showroom
+RewriteRule ^doi-tac/$ index.php?mod=partner&task=list [L]
+# san pham
+RewriteRule ^san-pham/$ index.php?mod=product&task=list_type [L]
+RewriteRule ^san-pham/trang-([0-9]+)/(.*)$ index.php?mod=product&task=list&page=$1&f=$2 [L]
+RewriteRule ^san-pham/(.*)$ index.php?mod=product&task=list&f=$1 [L]
+# gioi thieu chi tiet
+RewriteRule ^gioi-thieu/(.*)-([0-9]+).html$ index.php?mod=about&task=detail&link=$1&id=$2 [L]
+# gioi thieu
+RewriteRule ^gioi-thieu/$ index.php?mod=about&task=list [L]
+# dich vu chi tiet
+RewriteRule ^dich-vu/(.*)-([0-9]+).html$ index.php?mod=news&task=detail&link=$1&nid=$2 [L]
+# dich vu
+RewriteRule ^dich-vu/(.*)-([0-9]+)/trang-([0-9]+)/$ index.php?mod=news&task=list&cate=$1&id=$2&page=$3 [L]
+RewriteRule ^dich-vu/trang-([0-9]+)/$ index.php?mod=news&task=list&page=$1 [L]
+RewriteRule ^dich-vu/(.*)-([0-9]+)/$ index.php?mod=news&task=list&cate=$1&id=$2 [L]
+RewriteRule ^dich-vu/$ index.php?mod=news&task=list [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)-([0-9]+).html$ index.php?mod=product&task=detail&link=$1&pid=$2 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)-([0-9]+)/trang-([0-9]+)/(.*)$ index.php?mod=product&task=list&cate=$1&id=$2&page=$3&f=$4 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)-([0-9]+)/trang-([0-9]+)/$ index.php?mod=product&task=list&cate=$1&id=$2&page=$3 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)-([0-9]+)/(.*)$ index.php?mod=product&task=list&cate=$1&id=$2&f=$3 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)-([0-9]+)/$ index.php?mod=product&task=list&cate=$1&id=$2 [L]

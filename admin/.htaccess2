@@ -1,0 +1,5 @@
+AuthGroupFile /dev/null
+AuthType Basic
+AuthUserFile /var/www/.htpasswd
+AuthName "Login Require"
+require valid-user

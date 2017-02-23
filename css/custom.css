@@ -1,0 +1,66 @@
+.list_size a{margin-bottom: 5px}
+.list_size a.active{background:#0066ae;border:1px solid #0066ae;color:#fff}
+.first_bread{text-transform: uppercase}
+#cssmenu > ul > li > ul li.active a{color:#0066ae!important}
+.name_product{display: inline-block;height: 40px;overflow:hidden}
+#guide_size_hidden{margin-bottom:20px;position: relative;display: none}
+#close_guide{cursor:pointer;position:absolute;top:0;right:0}
+.btn_update_cart{padding:7px 15px;border:none;cursor:pointer}
+.btn_continue_cart{font-size:18px;display:inline-block;padding:7px 15px;background:#5fc991;color:#fff;border-radius:5px}
+.btn_continue_cart:hover{background:#333;color:#fff}
+.continue_cart{margin-bottom: 20px}
+.item_info_product .filter_color{margin:10px 0 2px}
+.item_info_product .list_size{margin:10px 0 2px}
+.item_info_product em {display: block;margin-bottom: 5px;font-size:12px}
+/*.list_footer li.col1{width:38%}
+.list_footer li.col2{width:36%}*/
+#slider1.no-embed-in{margin-left: 24px;width:434px;}
+.thumbelina-but.horiz{height: 87px;line-height: 86px;}
+.cloudzoom-zoom{background:#fff}
+.user_mod{margin-bottom:10px;display:block}
+.user_mod.active{color:#0066cc}
+.link_login{position:relative;z-index:999}
+.txt_faq{margin-bottom: 8px;width:87.2%;}
+#show_more_txt_faq{display: none}
+.btn_faq{cursor: pointer;border:none}
+#thank_rating{display: none}
+.bx-wrapper img{width:100%}
+.banner_big img{width:100%}
+.list_banner_home li{max-height: 323px; height:initial}
+.list_banner_home img{width:100%}
+li.box_video_home{border:none;}
+li.box_video_home .this_img{border:5px solid #666;width:99%}
+.head_video{right: 1%}
+.grid94p{width: 94%;margin:0 auto}
+rep{font-size: 17px;margin-right: 5px;color: rgb(97, 121, 11);font-weight: bold}
+.product-info .product-name a.title-blog-name{margin-top: -2px}
+.col30per{width:22%}
+.col70per{width:75%}
+.fix_header{position: fixed;width: 100%;top:-32px;z-index: 9999}
+.fix_logo{margin-top: 32px;height: 66px}
+.bottom-info-blog{border-top:1px dotted #ccc;background: none}
+.desc_just{text-align: justify;}
+.inner-post-wrapper .postContent{text-align: justify;}
+.product-name p{font-family: 'robotoR';font-size:14px;}
+.img_list_news{width:100%;margin-bottom:14px}
+.box_product .img_product img{ height: 142px; }
+@media screen and (min-width: 320px) and (max-width: 479px) {
+	.banner_big img{width:100%}
+	.col30per{width:100%}
+	.col70per{width:100%}
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+	.banner_big img{width:100%}
+	.col30per{width:100%}
+	.col70per{width:100%}
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+	.banner_big img{width:100%}
+	.col30per{width:100%}
+	.col70per{width:100%}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.banner_big img{width:100%}
+	.col30per{width:100%}
+	.col70per{width:100%}
+}

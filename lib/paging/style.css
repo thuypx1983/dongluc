@@ -1,0 +1,44 @@
+.paging_div {	
+	font-size:12px;
+}
+.paging_div span A:link, .paging_div span A:visited {
+	text-decoration: none;
+	color:#666666;
+}
+.paging_div span A:hover{
+	text-decoration: underline;
+	font-weight: bold;
+}
+.paging_current_class{
+	font-weight: bold;
+	color:#2238be;	
+	text-decoration:underline;
+}
+.paging_link_class{
+	font-weight: normal;
+	color: #2238be;	
+	border: none;
+}
+
+.span_a_class
+{
+	font-weight:normal;
+}
+
+.span_select_class
+{
+	color:red;
+	font-weight:bold;
+}
+/*custom css*/
+.span_select_class {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 5px 12px;
+    margin: 0 3px;
+    background: #0066ae;
+    color: #fff!important;
+    font-weight: bold;
+    border: 1px solid #0066ae;
+}
+.paging .span_a_class a:hover{ background:#0066ae;color:#fff;font-weight:bold;border:1px solid #0066ae;text-decoration:none }

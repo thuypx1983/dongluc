@@ -1,0 +1,20 @@
+/* CSS Document */
+
+.bold {
+	font-weight:bold;
+}
+.blue {
+	color:blue;
+}
+.big, .f-16 {
+	font-size:16px;
+}
+.medium, .f-14 {
+	font-size:14px;
+}
+.f-11 {
+	font-size:11px;
+}
+.f-12 {
+	font-size:12px;
+}

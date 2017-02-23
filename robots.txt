@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /modules/
+Disallow: /upload/
+
+Sitemap: http://palatinostudio.com/sitemap.xml

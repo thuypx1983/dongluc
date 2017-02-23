@@ -1,0 +1,1 @@
+{$smarty.session.username}
