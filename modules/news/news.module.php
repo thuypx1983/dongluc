@@ -39,6 +39,9 @@ class news extends base
             default: case "highlight_right":
 				$this->highlight_right();
 				break;
+            default: case "news_block_sport":
+				$this->news_block_sport();
+				break;
 		}
 	}	
 	
@@ -430,6 +433,17 @@ class news extends base
         $this->smarty->assign("rows", $rows);
 
         $this->smarty->display("highlight_right.tpl");
+    }
+
+    function news_block_sport(){
+        $rows = $this->db->getAll("
+			SELECT id, concat('{$this->pre}', '/', link) as pre_link, title, photo,description FROM {$this->table}
+			{$this->where} AND `news_category_id`=3
+			{$this->order}
+			LIMIT 0,5
+		");
+        $this->smarty->assign("rows", $rows);
+        $this->smarty->display("news_block_sport.tpl");
     }
 }
 

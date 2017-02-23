@@ -4,6 +4,10 @@
     {loadModule mod=news task=highlight_left}
     {loadModule mod=news task=highlight_right}
 </div>
+<div class="news-category">
+    {loadModule mod=news task=news_block_sport}
+    {loadModule mod=product task=slider_left}
+</div>
 <div class="grid94p">
 
     <div class="content_home pkg">

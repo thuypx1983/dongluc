@@ -77,6 +77,9 @@ class product extends base
 			default: case "list": 
 				$this->showList(); 
 				break;
+			default: case "slider_left":
+				$this->slider_left();
+				break;
 		}
 		
 	}
@@ -936,5 +939,19 @@ class product extends base
 		}
 		return $page;
 	}
+
+    ////////////////////////////////////////////////
+    //added by thuypx
+    //////////////////////////////////
+    function  slider_left(){
+        $rows = $this->db->getAll("
+				SELECT id, title, link, photo, code, price_sale, link_out
+				FROM {$this->table}
+				WHERE is_top = 1
+				ORDER BY z_index DESC LIMIT 20
+			");
+        $this->smarty->assign("rows", $rows);
+        $this->smarty->display("slider_left.tpl");
+    }
 }
 ?>
