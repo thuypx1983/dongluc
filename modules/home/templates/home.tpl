@@ -12,6 +12,9 @@
 <div class="news-service">
     {loadModule mod=news task=news_service}
 </div>
+<div class="partner">
+    {loadModule mod=ads task=partner}
+</div>
 <div class="grid94p">
 
     <div class="content_home pkg">
