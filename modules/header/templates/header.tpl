@@ -15,7 +15,7 @@
 <script type="text/javascript" src="{$url}js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="{$url}js/jquery.bxslider.js"></script>
 <script src="{$url}js/jquery.sticky.js" type="text/javascript"></script>
-<script src="{$url}js/js/slick-1.6.0/slick.min.js" type="text/javascript"></script>
+<script src="{$url}js/slick-1.6.0/slick.min.js" type="text/javascript"></script>
 <script type="text/javascript"> var url = "{$url}"; </script>
 {getPageinfo}
 {literal}
