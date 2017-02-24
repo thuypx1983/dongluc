@@ -26,7 +26,7 @@ class ads extends base {
 		$rows = $this->db->getAll("SELECT id, photo, title, link, target, embed, ads_type FROM ads {$this->where} AND position = '{$pos}' {$where} {$this->order} ");
 		echo mysql_error();
 		foreach ($rows as $k => $v) {
-			$rows[$k]["photo"] = $pos."/".$v["photo"];
+			$rows[$k]["photo"] = str_replace('partner/','/',$pos."/".$v["photo"]);
 		}
 		//echo"<pre>";print_r($rows);echo"</pre>";
 		$this->smarty->assign("rows", $rows);
