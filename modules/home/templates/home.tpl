@@ -12,6 +12,10 @@
 <div class="news-service">
     {loadModule mod=news task=news_service}
 </div>
+
+<div class="videos">
+    {loadModule mod=ads task=video}
+</div>
 <div class="partner">
     {loadModule mod=ads task=partner}
 </div>
