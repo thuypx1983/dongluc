@@ -26,6 +26,10 @@ class ads extends base {
 		$rows = $this->db->getAll("SELECT id, photo, title, link, target, embed, ads_type FROM ads {$this->where} AND position = '{$pos}' {$where} {$this->order} ");
 		echo mysql_error();
 		foreach ($rows as $k => $v) {
+            if($pos=='video'){
+                preg_match('/src="([^"]+)"/', $rows[$k]['embed'], $match);
+                $rows[$k]["video_src"]=$match[1];
+            }
 			$rows[$k]["photo"] = $pos."/".$v["photo"];
 		}
 		//echo"<pre>";print_r($rows);echo"</pre>";
