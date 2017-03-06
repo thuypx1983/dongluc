@@ -11,11 +11,13 @@
 <link type="text/css" href="{$url}css/jquery.bxslider.css" rel="stylesheet">
 <link type="text/css" href="{$url}css/custom.css" rel="stylesheet">
 <link type="text/css" href="{$url}js/slick-1.6.0/slick.css" rel="stylesheet">
+<link type="text/css" href="{$url}js/jquery.fancybox.css" rel="stylesheet">
 
 <script type="text/javascript" src="{$url}js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="{$url}js/jquery.bxslider.js"></script>
 <script src="{$url}js/jquery.sticky.js" type="text/javascript"></script>
 <script src="{$url}js/slick-1.6.0/slick.min.js" type="text/javascript"></script>
+<script src="{$url}js/jquery.fancybox.js" type="text/javascript"></script>
 <script src="{$url}js/custom.js" type="text/javascript"></script>
 <script type="text/javascript"> var url = "{$url}"; </script>
 {getPageinfo}
