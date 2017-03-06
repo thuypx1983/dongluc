@@ -12,6 +12,7 @@
 <link type="text/css" href="{$url}css/custom.css" rel="stylesheet">
 <link type="text/css" href="{$url}js/slick-1.6.0/slick.css" rel="stylesheet">
 <link type="text/css" href="{$url}css/jquery.fancybox.css" rel="stylesheet">
+<link type="text/css" href="{$url}css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <script type="text/javascript" src="{$url}js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="{$url}js/jquery-migrate-1.0.0.js"></script>
