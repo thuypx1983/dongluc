@@ -9,17 +9,26 @@
     {loadModule mod=product task=slider_left}
 </div>
 
-<div class="news-service">
-    {loadModule mod=news task=news_service}
-</div>
 
 <div class="videos">
+    <div class="block-title">
+        <span>Video</span>
+    </div>
     {loadModule mod=ads task=video}
+</div>
+<div class="news-service">
+    <div class="block-title">
+        <span>Dịch vụ</span>
+    </div>
+    {loadModule mod=news task=news_service}
 </div>
 
 <div class="grid1060">
 {loadModule mod=product task=list_top_home}
 </div>
 <div class="partner">
+    <div class="block-title">
+        <span>Đối tác</span>
+    </div>
     {loadModule mod=ads task=partner}
 </div>
