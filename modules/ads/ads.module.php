@@ -31,7 +31,7 @@ class ads extends base {
                 if(strpos($match[1],'https://')===false AND strpos($match[1],'http://')===false){
                     $src='https:'.$match[1];
                 }
-                $rows[$k]["video_src"]=$src.'https://www.youtube.com/v/'.$this->youtube_id_from_url($src).'?fs=1&amp;autoplay=1';
+                $rows[$k]["video_src"]='https://www.youtube.com/v/'.$this->youtube_id_from_url($src).'?fs=1&amp;autoplay=1';
 
             }
 			$rows[$k]["photo"] = $pos."/".$v["photo"];
