@@ -14,7 +14,7 @@
 <link type="text/css" href="{$url}css/jquery.fancybox.css" rel="stylesheet">
 
 <script type="text/javascript" src="{$url}js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="{$url}js/js/jquery-migrate-1.0.0.js"></script>
+<script type="text/javascript" src="{$url}js/jquery-migrate-1.0.0.js"></script>
 <script type="text/javascript" src="{$url}js/jquery.bxslider.js"></script>
 <script src="{$url}js/jquery.sticky.js" type="text/javascript"></script>
 <script src="{$url}js/slick-1.6.0/slick.min.js" type="text/javascript"></script>
