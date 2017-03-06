@@ -28,7 +28,7 @@ class ads extends base {
 		foreach ($rows as $k => $v) {
             if($pos=='video'){
                 preg_match('/src="([^"]+)"/', $rows[$k]['embed'], $match);
-                $rows[$k]["video_src"]=$match[1];
+                $rows[$k]["video_src"]='https://www.youtube.com/v/'.$this->youtube_id_from_url($match[1]).'?fs=1&amp;autoplay=1';
             }
 			$rows[$k]["photo"] = $pos."/".$v["photo"];
 		}
@@ -71,5 +71,30 @@ class ads extends base {
 		$oSmarty->assign('position', $position);			
 		$oSmarty->display('ads.tpl');
 	}
+
+
+    function youtube_id_from_url($url) {
+        $pattern =
+            '%^# Match any youtube URL
+                (?:https?://)?  # Optional scheme. Either http or https
+                (?:www\.)?      # Optional www subdomain
+                (?:             # Group host alternatives
+                  youtu\.be/    # Either youtu.be,
+                | youtube\.com  # or youtube.com
+                  (?:           # Group path alternatives
+                    /embed/     # Either /embed/
+                  | /v/         # or /v/
+                  | /watch\?v=  # or /watch\?v=
+                  )             # End path alternatives.
+                )               # End host alternatives.
+                ([\w-]{10,12})  # Allow 10-12 for 11 char youtube id.
+                $%x'
+        ;
+        $result = preg_match($pattern, $url, $matches);
+        if ($result) {
+            return $matches[1];
+        }
+        return false;
+    }
 }
 ?>
