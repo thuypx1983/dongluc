@@ -28,8 +28,11 @@ class ads extends base {
 		foreach ($rows as $k => $v) {
             if($pos=='video'){
                 preg_match('/src="([^"]+)"/', $rows[$k]['embed'], $match);
-                //$rows[$k]["video_src"]='https://www.youtube.com/v/'.$this->youtube_id_from_url($match[1]).'?fs=1&amp;autoplay=1';
-                $rows[$k]["video_src"]=$match[1];
+                if(strpos($match[1],'https://')===false OR strpos($match[1],'http://')){
+                    $src='https:'.$match[1];
+                }
+                $rows[$k]["video_src"]='https://www.youtube.com/v/'.$this->youtube_id_from_url($src).'?fs=1&amp;autoplay=1';
+
             }
 			$rows[$k]["photo"] = $pos."/".$v["photo"];
 		}
