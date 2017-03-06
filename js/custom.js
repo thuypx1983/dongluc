@@ -25,4 +25,24 @@ $(document).ready(function(){
 		nextArrow: '<i class="fa fa-chevron-right custom-slick-arr slick-arr-right"></i>',
         prevArrow: '<i class="fa fa-chevron-left custom-slick-arr slick-arr-left"></i>',
 	});
+
+    $(".video-items .thumb300.thumbblock").click(function() {
+        $.fancybox({
+            'padding'		: 0,
+            'autoScale'		: false,
+            'transitionIn'	: 'none',
+            'transitionOut'	: 'none',
+            'title'			: this.title,
+            'width'			: 640,
+            'height'		: 385,
+            'href'			: this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+            'type'			: 'swf',
+            'swf'			: {
+                'wmode'				: 'transparent',
+                'allowfullscreen'	: 'true'
+            }
+        });
+
+        return false;
+    });
 });
