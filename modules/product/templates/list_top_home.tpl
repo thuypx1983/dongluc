@@ -13,17 +13,4 @@
       </ul>
     </div>
 
-    <script type="text/javascript">
-  $(document).ready(function(){
-    $('.hot_product').bxSlider({
-    minSlides: 2,
-    maxSlides: 5,
-    moveSlides:4,
-    slideWidth: 180,
-    slideMargin: 39,
-    auto:true,
-    });
-  })
-  </script>
-
   
