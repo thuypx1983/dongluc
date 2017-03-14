@@ -6,7 +6,8 @@
 </div>
 <div class="news-category">
     {loadModule mod=news task=news_block_sport}
-    {loadModule mod=product task=slider_left}
+    <!--{loadModule mod=product task=slider_left}-->
+    {loadModule mod=ads task=homecategory}
 </div>
 
 
