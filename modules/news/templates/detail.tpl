@@ -38,6 +38,18 @@
               </div>
               <div class="postContent">
                     {$row.content}
+              </div>
+                <div class="social-box">
+                    <div class="btn-facebook">
+                        <div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+                    </div>
+                    <div class="btn-google-plus">
+                        <!-- Place this tag in your head or just before your close body tag. -->
+                        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+                        <!-- Place this tag where you want the +1 button to render. -->
+                        <div class="g-plusone" data-annotation="inline" data-width="120"></div>
+                    </div>
                 </div>
             </div>
           </div>
