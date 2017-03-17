@@ -60,3 +60,16 @@
       </div>
     </div>
   </div>
+
+<div class="popular-product">
+    <div class="block-title">
+        <span>Sản phẩm nổi bật</span>
+    </div>
+    {loadModule mod=product task=list_top_home}
+</div>
+<div class="partner">
+    <div class="block-title">
+        <span>Đối tác</span>
+    </div>
+    {loadModule mod=ads task=partner}
+</div>
