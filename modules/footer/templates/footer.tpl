@@ -498,6 +498,10 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 
 </script>
 
+<!-- google plug plugin -->
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 <!-- facebook plugin -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
