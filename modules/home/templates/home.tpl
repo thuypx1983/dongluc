@@ -5,9 +5,9 @@
     {loadModule mod=news task=highlight_right}
 </div>
 <div class="news-category">
-    {loadModule mod=news task=news_block_sport}
     <!--{loadModule mod=product task=slider_left}-->
     {loadModule mod=ads task=homecategory}
+	{loadModule mod=news task=news_block_sport}
 </div>
 
 
@@ -24,7 +24,10 @@
     {loadModule mod=news task=news_service}
 </div>
 
-<div class="grid1060">
+<div class="popular-product">
+	<div class="block-title">
+        <span>Sản phẩm nổi bật</span>
+    </div>
 {loadModule mod=product task=list_top_home}
 </div>
 <div class="partner">

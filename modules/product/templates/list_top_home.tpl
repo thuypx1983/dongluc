@@ -1,16 +1,27 @@
-<div class="content_home pkg"> <a href="" class="head_title">Sản phẩm nổi bật</a>
+<ul class="popular_product">
+{foreach from=$rows item=row key=k}
+	<li>
+		<div class="p-product-wrapper">
+			<div class="p-product-img-wrapper">
+				<a href="{if $row.link_out!=''}{$row.link_out}{else}{$url}{$row.link}-{$row.id}.html{/if}">
+					<img src="{$url}upload/product/thumb/{$row.photo|default:'no-img.jpg'}" />
+				</a>
+			</div>
+			<div class="p-product-info">
+				<div class="p-product-title">
+					<a href="{if $row.link_out!=''}{$row.link_out}{else}{$url}{$row.link}-{$row.id}.html{/if}">{$row.title}</a>
+				</div>
+				<div class="p-product-code">
+					Mã: {$row.code}
+				</div>
+				<div class="p-product-price">
+					{$row.price_sale|number_format:0:".":","} vnđ
+				</div>
+			</div>
+			
+		</div>
+	</li>
+{/foreach}
+</ul>
 
-      <ul class="hot_product">
-        {foreach from=$rows item=row key=k}
-        <li>
-                <div class="box_product"><a class="img_product" href="{if $row.link_out!=''}{$row.link_out}{else}{$url}{$row.link}-{$row.id}.html{/if}"><img src="{$url}upload/product/thumb/{$row.photo|default:'no-img.jpg'}" /><span class="view_more">chi tiết</span><span class="price_item">{$row.price_sale|number_format:0:".":","} vnđ</span></a>
-                  <div class="price_product"> <a href="{if $row.link_out!=''}{$row.link_out}{else}{$url}{$row.link}-{$row.id}.html{/if}" class="name_product">{$row.title}</a>
-                    <div class="code_prodcut">Mã: {$row.code}</div>
-                  </div>
-                </div>
-              </li>
-        {/foreach}
-      </ul>
-    </div>
 
-  
