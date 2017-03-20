@@ -45,6 +45,10 @@
                                 <div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                             </div>
                         </div>
+
+                        <div class="external-comment">
+                            <div class="fb-comments" data-width="100%" data-numposts="5"></div>
+                        </div>
                     </div>
                 </div>
             </div>
