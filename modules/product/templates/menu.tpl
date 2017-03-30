@@ -32,18 +32,20 @@
 				<a href="{$url}dich-vu/" {if $smarty.get.mod=='news'}class="active"{/if}>Dịch vụ</a>
 				<ul class="sub_menu_main 1">
 					{foreach from=$cats item=row key=k}
-					 <li>
-					 <a href="{if $row.link_to!=''}{$row.link_to}{else}{$url}dich-vu/{$row.link}-{$row.id}/{/if}">{$row.title}</a>
-					  {if $row.children}
-					  <ul class="sub_menu_main2">
-							{foreach from=$row.children item=r}
-							<li><a href="{if $r.link_to!=''}{$r.link_to}{else}{$url}dich-vu/{$r.link}-{$r.id}/{/if}">{$r.title}</a>
-								
-							</li>
-							{/foreach}
-					  </ul>
-					{/if}
-					 </li>
+                        {if $row.id!=18}
+                             <li>
+                             <a href="{if $row.link_to!=''}{$row.link_to}{else}{$url}dich-vu/{$row.link}-{$row.id}/{/if}">{$row.title}</a>
+                              {if $row.children}
+                              <ul class="sub_menu_main2">
+                                    {foreach from=$row.children item=r}
+                                    <li><a href="{if $r.link_to!=''}{$r.link_to}{else}{$url}dich-vu/{$r.link}-{$r.id}/{/if}">{$r.title}</a>
+
+                                    </li>
+                                    {/foreach}
+                              </ul>
+                            {/if}
+                             </li>
+                        {/if}
 					{/foreach}
 				</ul>
 			</li>
@@ -58,6 +60,7 @@
                 {/if}
             </li>
             <!-- <li><a href="{$url}doi-tac/"  {if $smarty.get.mod=='partner'}class="active"{/if}>Đối tác</a></li> -->
+            <li><a href="/dich-vu/tin-tuc-18/">Tin tức</a></li>
             <li><a href="{$url}lien-he.html"  {if $smarty.get.mod=='contact'}class="active"{/if}>Liên hệ</a></li>
           </ul>
         </div>
