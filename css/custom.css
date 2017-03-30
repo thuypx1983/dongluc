@@ -215,7 +215,7 @@ rep{font-size: 17px;margin-right: 5px;color: rgb(97, 121, 11);font-weight: bold}
 		vertical-align:middle;
 	}
 	.news-category .product-slider-right-wrapper .box_product{
-		width: 65%;
+		width: 57.1%;
 	}
 	.news-category .news-sport li.news-item{
 		width:95%;
@@ -299,7 +299,7 @@ rep{font-size: 17px;margin-right: 5px;color: rgb(97, 121, 11);font-weight: bold}
 }
 .slick-arr-down{
 	left:48%;
-	bottom: -15px;
+	bottom: -45px;
 }
 
 /*
@@ -583,6 +583,7 @@ div.partner .partner-item-wrapper {
 }
 div.partner img{
 	max-width:100%;
+	width: 100%;
 }
 
 
@@ -752,9 +753,15 @@ button.close {
     #newsletters .bst-col,
     #footer .bst-col,
     #powered .bst-col
-    {
+	{
         width: 100%;   
     }
+	
+	#newsletters .left .newsletters-img-wrapper{
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+	
 }
 @media (min-width: 768px){
     .container {
@@ -817,6 +824,18 @@ button.close {
     }
 }
 
+#newsletters .left .bst-col{
+	width: 20%;
+}
+#newsletters .newsletters-img-wrapper{
+	text-align:center;
+}
+#newsletters .left img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
 
 /*Content*/
 
@@ -834,10 +853,6 @@ button.close {
 #newsletters .right {
     padding-top: 15px;
     padding-bottom: 15px;
-}
-#newsletters .left img {
-    float: left;
-    margin-right: 15px;
 }
 #newsletters .right input {
     background-color: #004C92;
@@ -1004,4 +1019,59 @@ button.close {
 #powered ul li + li a {
     border-left: 1px solid #fff;
     padding: 0 4px;
+}
+
+/*Post*/
+.social-box .btn-facebook,
+.social-box .btn-google-plus
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+div#___plusone_0,
+div#___plusone_1
+{
+    width: 45px !important;
+}
+
+/*Submenu*/
+.sub_menu_main{
+	position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.sub_menu_main li {
+	width:13% !important;
+	overflow:hidden;
+	margin:1% 1% 1% 0;
+}
+.sub_menu_main2{
+	display:block !important;
+	position: initial;
+	box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+	moz-box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+	ms-box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+	width: 100%;
+}
+.sub_menu_main2 li{
+	width:100% !important;
+}
+.sub_menu_main2 li a{
+	padding: 10px 0 !important;
+}
+.menu_main ul > li:hover > a, .menu_main ul > li > a.active {
+	border-bottom: initial;
+    box-sizing: initial;
+    padding-bottom: 0;
+}
+.sub_menu_main3 {
+	display:none !important;
+	position: initial !important;
+	padding-left: 20px;
+}
+.sub_menu_main3 li a:before{
+	content: '\25BA';
+    position: relative;
+	left: -5px;
 }

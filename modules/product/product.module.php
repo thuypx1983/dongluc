@@ -776,18 +776,18 @@ class product extends base
 		
 		foreach($rows as $k=>$v) {
 			
-			$rows[$k]['sub'] = $this->db->getAll("SELECT id, title, link, concat('{$_GET['menu_type']}', '/', link) as pre_link FROM {$this->table_category} {$this->where} AND parent_id = '{$v['id']}' $order ");
+			$rows[$k]['sub'] = $this->db->getAll("SELECT id, title, link, link_to, concat('{$_GET['menu_type']}', '/', link) as pre_link FROM {$this->table_category} {$this->where} AND parent_id = '{$v['id']}' $order ");
 			// mảng này để lấy trạng thái select ngoài category
 			$rows[$k]['sub_ids'] = $this->db->getCol("SELECT id FROM {$this->table_category} {$this->where} AND parent_id = '{$v['id']}' $order ");
 			foreach($rows[$k]['sub'] as $k1=>$v1) {
 				
-				$rows[$k]['sub'][$k1]['sub'] = $this->db->getAll("SELECT id, title, link, concat('{$_GET['menu_type']}', '/', link) as pre_link FROM {$this->table_category} {$this->where} AND parent_id = '{$v1['id']}' $order ");
+				$rows[$k]['sub'][$k1]['sub'] = $this->db->getAll("SELECT id, title, link, link_to, concat('{$_GET['menu_type']}', '/', link) as pre_link FROM {$this->table_category} {$this->where} AND parent_id = '{$v1['id']}' $order ");
 				foreach($rows[$k]['sub'][$k1]['sub'] as $k2=>$v2) {
 					if($temp[2]==$v2['id']) {
-						$rows[$k]['sub'][$k1]['sub'][$k2]['sub'] = $this->db->getAll("SELECT id, title, link, concat('{$_GET['menu_type']}', '/', link) as pre_link FROM {$this->table_category} {$this->where} AND parent_id = '{$v2['id']}' $order ");
+						$rows[$k]['sub'][$k1]['sub'][$k2]['sub'] = $this->db->getAll("SELECT id, title, link, link_to, concat('{$_GET['menu_type']}', '/', link) as pre_link FROM {$this->table_category} {$this->where} AND parent_id = '{$v2['id']}' $order ");
 						foreach($rows[$k]['sub'][$k1]['sub'][$k2]['sub'] as $k3=>$v3) {
 							if($temp[3]==$v3['id']) {
-								$rows[$k]['sub'][$k1]['sub'][$k2]['sub'][$k3]['sub'] = $this->db->getAll("SELECT id, title, link, concat('{$_GET['menu_type']}', '/', link) as pre_link FROM {$this->table_category} {$this->where} AND parent_id = '{$v3['id']}' $order ");
+								$rows[$k]['sub'][$k1]['sub'][$k2]['sub'][$k3]['sub'] = $this->db->getAll("SELECT id, title, link, link_to, concat('{$_GET['menu_type']}', '/', link) as pre_link FROM {$this->table_category} {$this->where} AND parent_id = '{$v3['id']}' $order ");
 								
 							}
 						}
@@ -799,6 +799,24 @@ class product extends base
 
 		// vùng miền
 		$region = $this->db->getAll("SELECT * FROM region ORDER BY id DESC");
+		
+		//dịch vụ
+		
+		$news_category = $this->db->getAll("SELECT * FROM news_category ORDER BY z_index ASC ");
+		$cats=array();
+		foreach($news_category as $item){
+			if($item['parent_id']==0){
+				$item['children']=array();
+				$cats[$item['id']]=$item;	
+			}
+		}
+		foreach($news_category as $item){
+			if($item['parent_id']>0){
+				$cats[$item['parent_id']]['children'][]=$item;	
+			}
+		}
+		$this->smarty->assign("cats", $cats);
+		
 		$this->smarty->assign("region", $region);
 		$this->smarty->display("menu.tpl");
 	}

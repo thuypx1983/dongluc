@@ -5,13 +5,31 @@
                 <div class="bst-col left">
                     <div class="row">
                             <div class="bst-col">
-                                <img src="http://donglucshop.vn/apt-upload/image/cache/data/banner/newsletters/nl1-140x80.png" alt="Giải thưởng Sao Vàng Đất Việt" title="Giải thưởng Sao Vàng Đất Việt">
-                                        Giải thưởng Sao Vàng Đất Việt
+								<div class="newsletters-img-wrapper">
+									<img src="/images/SVDV-2.png" alt="Giải thưởng Sao Vàng Đất Việt" title="Giải thưởng Sao Vàng Đất Việt" />                                        
+								</div>
                             </div>
                             <div class="bst-col">
-                                <img src="http://donglucshop.vn/apt-upload/image/cache/data/banner/newsletters/nl2-140x80.png" alt="Hàng Việt Nam chất lượng cao" title="Hàng Việt Nam chất lượng cao">
-                                        Hàng Việt Nam chất lượng cao
+								<div class="newsletters-img-wrapper">
+									<img src="/images/HVNCLC-2.png" alt="Hàng Việt Nam chất lượng cao" title="Hàng Việt Nam chất lượng cao" />                                        
+								</div>
                             </div>
+							<div class="bst-col">
+								<div class="newsletters-img-wrapper">
+									<img src="/images/chung-chi-ISO_9001-4.png" alt="" title="" />                                        
+								</div>
+                            </div>
+							<div class="bst-col">
+								<div class="newsletters-img-wrapper">
+									<img src="/images/chung-chi-wfsgi-3.png" alt="" title="" />                                        
+								</div>
+                            </div>
+							<div class="bst-col">
+								<div class="newsletters-img-wrapper">
+									<img src="/images/chung-chi-sgs-3.png" alt="" title="" />                                        
+								</div>
+                            </div>
+							
                     </div>
                 </div>
                 <div class="bst-col right">

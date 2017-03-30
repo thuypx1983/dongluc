@@ -1130,11 +1130,11 @@ i {}
   .sub_menu_main li{border-bottom:1px solid #eee;width:49%;box-sizing:border-box;float:left}
    .sub_menu_main li a{text-transform:inherit !important;font-family:'robotoB';color:#555 !important;padding:7px 0 !important}
    .sub_menu_main li:hover{border-bottom:1px solid #eee !important}
-   .sub_menu_main li:hover a{border:none !important;color:#0066ae !important;padding:7px 0!important;}
+   /*.sub_menu_main li:hover a{border:none !important;color:#0066ae !important;padding:7px 0!important;}*/
    .sub_menu_main li:hover .sub_menu_main2{display:block}
    .sub_menu_main li .sub_menu_main2{left:-160px}
    .sub_menu_main li:nth-child(2n+0) .sub_menu_main2{left:186px}
-   .sub_menu_main2{position:absolute;background:#f9f9f9;border-top:4px solid #dddddd;z-index:999;display:none;box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
+   .sub_menu_main2{position:absolute;background:#f9f9f9;border-top:1px solid #dddddd;z-index:999;display:none;box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
   -moz-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
   -ms-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);box-sizing:border-box;width:160px;left:0;top:0}
    .sub_menu_main2 li{border-bottom:1px dotted #ddd;width:100%;top:0;position:relative}

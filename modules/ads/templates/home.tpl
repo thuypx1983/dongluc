@@ -5,7 +5,7 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 		  $('.list_slide').bxSlider({
-			  adaptiveHeight: true,
+			  //adaptiveHeight: true,
 			  controls:false,
 			  auto:true,
 			  autoHover:false,
