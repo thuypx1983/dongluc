@@ -100,11 +100,11 @@ function getNewsCategory(value) {
 						</tr>
 						<tr>
 							<td>Mô tả (Meta)</td>
-							<td><textarea name="seo_description" class="input" style="width:500px; height:100px;">{$row.seo_photo_alt}</textarea></td>
+							<td><textarea name="seo_description" class="input" style="width:500px; height:100px;">{$row.seo_description}</textarea></td>
 						</tr>
 						<tr>
 							<td>Từ khóa (Meta)</td>
-							<td><textarea name="seo_keyword" class="input"  style="width:500px; height:100px;">{$row.seo_photo_alt}</textarea></td>
+							<td><textarea name="seo_keyword" class="input"  style="width:500px; height:100px;">{$row.seo_keyword}</textarea></td>
 						</tr>
 					</table>
 				</div>

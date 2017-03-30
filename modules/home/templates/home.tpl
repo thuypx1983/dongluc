@@ -5,7 +5,6 @@
     {loadModule mod=news task=highlight_right}
 </div>
 <div class="news-category">
-    <!--{loadModule mod=product task=slider_left}-->
     {loadModule mod=ads task=homecategory}
 	{loadModule mod=news task=news_block_sport}
 </div>
