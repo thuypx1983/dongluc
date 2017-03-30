@@ -441,7 +441,7 @@ class news extends base
     function news_block_sport(){
         $rows = $this->db->getAll("
 			SELECT id, concat('{$this->pre}', '/', link) as pre_link, title, photo,description FROM {$this->table}
-			{$this->where} AND `news_category_id`=3
+			{$this->where} AND `news_category_id`=18
 			{$this->order}
 			LIMIT 0,5
 		");
