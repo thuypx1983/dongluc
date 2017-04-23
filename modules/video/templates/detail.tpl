@@ -9,11 +9,7 @@
                     <a href="{$url}dich-vu/" class="first_bread">
                         Dịch vụ{if count($bread)>0}<span class="arr_bread"><img src="{$url}images/arr_brad.png"/></span>{/if}
                     </a>
-                    {foreach from=$bread item=bre key=k}
-                        <a href="{$url}{if $bre.pre_link}{$bre.pre_link}-{$bre.id}/{/if}">{$bre.title}</a>
-                        {if count($bread)>($k+1)}<span class="arr_bread"><img src="{$url}images/arr_brad.png"/></span>{/if}
-
-                    {/foreach}
+                    <a href="/videos/">Videos</a>
                 </div>
             </div>
 
@@ -34,7 +30,7 @@
                             </div>
                         </div>
                         <div class="postContent">
-                            {$row.content}
+                            {$row.embed}
                         </div>
                         <div class="social-box social-after-content">
                             <div class="btn-google-plus">

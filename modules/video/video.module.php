@@ -33,7 +33,6 @@ class video extends base
 			 WHERE id = '{$_GET['nid']}'
 		";
         $row = $this->db->getRow($sql);
-        print_r($row);
         $row["content"] = stripslashes($row["content"]);
         $row["title"] = stripslashes($row["title"]);
         $row["content"] = str_replace("upload/editor/", SITE_URL . "upload/editor/", $row["content"]);
@@ -44,7 +43,7 @@ class video extends base
         if ($_GET['nid'] != '') {
             $_GET['menu_type'] = 'videos';
             $bread = array();
-            $bread[]=array('id'=>1, 'title'=>'video', 'link'=>'/video/', 'parent_id'=>0, 'pre_link'=>'/video/' );
+            $bread[]=array('id'=>1, 'title'=>'video', 'link'=>'/videos/', 'parent_id'=>0, 'pre_link'=>'/videos/' );
 
 
         }
