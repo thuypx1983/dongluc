@@ -65,11 +65,11 @@ class ads extends base
 				"embed"            => $_POST["embed"]."",
 			);
 
-			if ($_POST['link'] != '')
+			/*if ($_POST['link'] != '')
 			{
 				$row['link'] = preg_replace('#^https?://#', '', $_POST['link']);
 				$row['link'] = 'http://' . $row['link'];
-			}
+			}*/
 
 			if($_FILES['photo']['name']!='')
 			{
@@ -127,8 +127,8 @@ class ads extends base
 			
 			if ($_POST['link'] != '')
 			{
-				$row['link'] = preg_replace('#^https?://#', '', $_POST['link']);
-				$row['link'] = 'http://' . $row['link'];
+				/*$row['link'] = preg_replace('#^https?://#', '', $_POST['link']);
+				$row['link'] = 'http://' . $row['link'];*/
 			}
 
 			if($_POST["che_delphoto"]=="on")

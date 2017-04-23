@@ -63,11 +63,11 @@ class news_category extends base
 				"seo_keyword"=>$_POST["seo_keyword"],
 			);
 			
-			if ($_POST['link_to'] != '')
+			/*if ($_POST['link_to'] != '')
 			{
 				$row['link_to'] = preg_replace('#^https?://#', '', $_POST['link_to']);
 				$row['link_to'] = 'http://' . $row['link_to'];
-			}
+			}*/
 
 			$row["content"] = str_replace(SITE_URL."upload/editor/", "upload/editor/", $_POST["content"]);
 

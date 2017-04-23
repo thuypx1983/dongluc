@@ -63,11 +63,11 @@ class product_type extends base
 				"seo_keyword"=>$_POST["seo_keyword"],
 			);
 
-			if ($_POST['link_to'] != '')
+			/*if ($_POST['link_to'] != '')
 			{
 				$row['link_to'] = preg_replace('#^https?://#', '', $_POST['link_to']);
 				$row['link_to'] = 'http://' . $row['link_to'];
-			}
+			}*/
 
 			if($_FILES['thumb']['name']!='') {
 				$row['thumb']= $_FILES['thumb']['name'];
@@ -105,11 +105,11 @@ class product_type extends base
 				
 			);
 
-			if ($_POST['link_to'] != '')
+			/*if ($_POST['link_to'] != '')
 			{
 				$row['link_to'] = preg_replace('#^https?://#', '', $_POST['link_to']);
 				$row['link_to'] = 'http://' . $row['link_to'];
-			}
+			}*/
 
 			if($_POST["che_delthumb"]=="on")
 			{
