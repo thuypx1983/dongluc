@@ -32,6 +32,7 @@ class news extends base
 			FROM {$this->table}
 			{$this->where} AND id = '{$_GET['nid']}'
 		";
+        echo $sql;
         $row = $this->db->getRow($sql);
 
         $row["content"] = stripslashes($row["content"]);
