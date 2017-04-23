@@ -106,12 +106,35 @@
       <td class="col_left">Ngày tạo</td>
       <td class="col_right"><input name="create_date" type="text" value="{$row.create_date|default:$smarty.now|date_format:'%Y-%m-%d'}" readonly="readonly" /></td>
     </tr>
+      <tr>
+          <td class="col_left">summary</td>
+          <td><textarea name="summary" cols="100" rows="8">{$row.summary}</textarea></td>
+      </tr>
+      <tr>
+          <td class="col_left">content</td>
+          <td>{'content'|ckeditor:$row.content:'Full':850:800}</td>
+      </tr>
+      <tr>
+          <td width="100px">Tiêu đề (Meta)</td>
+          <td><input name="seo_title" class="input" value="{$row.seo_title}" style="width:500px;" /></td>
+      </tr>
+      <tr>
+          <td>Mô tả (Meta)</td>
+          <td><textarea name="seo_description" class="input" style="width:500px; height:100px;">{$row.seo_description}</textarea></td>
+      </tr>
+      <tr>
+          <td>Từ khóa (Meta)</td>
+          <td><textarea name="seo_keyword" class="input"  style="width:500px; height:100px;">{$row.seo_keyword}</textarea></td>
+      </tr>
     <tr>
       <td class="col_left">&nbsp;</td>
       <td class="col_right"><input type="submit" name="Submit3" value="{#button_submit#}" />
         <input type="button" name="Submit3" value="{#button_back#}" onclick="location.href='{$smarty.session.grid_url}'"/></td>
     </tr>
   </table>
+    <fieldset>
+        <title></title>
+    </fieldset>
 
   
 </form>

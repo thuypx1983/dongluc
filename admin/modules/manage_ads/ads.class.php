@@ -63,6 +63,11 @@ class ads extends base
 				"lang"             => $_SESSION["lang"],
 				"target"           => $_POST["target"],
 				"embed"            => $_POST["embed"]."",
+                "summary"            =>$_POST["summary"]."",
+                "content"            =>$_POST["content"]."",
+                "seo_keyword"            =>$_POST["seo_keyword"]."",
+                "seo_title"            =>$_POST["seo_title"]."",
+                "seo_descption"            =>$_POST["seo_descption"]."",
 			);
 
 			/*if ($_POST['link'] != '')
@@ -123,6 +128,11 @@ class ads extends base
 				"lang"             =>$_SESSION["lang"],
 				"target"           =>$_POST["target"],
 				"embed"            =>$_POST["embed"]."",
+				"summary"            =>$_POST["summary"]."",
+				"content"            =>$_POST["content"]."",
+				"seo_keyword"            =>$_POST["seo_keyword"]."",
+				"seo_title"            =>$_POST["seo_title"]."",
+				"seo_descption"            =>$_POST["seo_descption"]."",
 			);
 			
 			if ($_POST['link'] != '')
