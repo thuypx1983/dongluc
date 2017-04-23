@@ -58,22 +58,7 @@ class video extends base
 			FROM {$this->table}
 			{$this->where} {$where} 
 		";
-
-        $arr1 = $this->db->getAll($sql . " AND id < {$row['id']} ORDER BY id DESC LIMIT 2");
-        $arr2 = $this->db->getAll($sql . " AND id > {$row['id']} ORDER BY id ASC LIMIT 2");
-
-        $c_arr1 = count($arr1);
-        $c_arr2 = count($arr2);
-
-        if ($c_arr1 < 2) {
-            $arr2 = $this->db->getAll($sql . " AND id > {$row['id']} ORDER BY id ASC LIMIT " . (4 - $c_arr1));
-        }
-
-        if ($c_arr2 < 2) {
-            $arr1 = $this->db->getAll($sql . " AND id < {$row['id']} ORDER BY id DESC LIMIT " . (4 - $c_arr2));
-        }
-        krsort($arr1);
-        $rows = array_merge($arr1, $arr2);
+        $rows = $this->db->getAll($sql);
 
         #$rows = $this->db->getAll($sql);
 
