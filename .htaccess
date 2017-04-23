@@ -36,7 +36,7 @@ RewriteRule ^gioi-thieu/$ index.php?mod=about&task=list [L]
 # video
 RewriteRule ^videos/trang-([0-9]+)/$ index.php?mod=video&task=list&page=$1 [L]
 RewriteRule ^videos/$ index.php?mod=video&task=list [L]
-RewriteRule ^videos/([0-9]+).html$ index.php?mod=video&task=detail&nid=$2 [L]
+RewriteRule ^videos/([0-9]+).html$ index.php?mod=video&task=detail&nid=$1 [L]
 # dich vu chi tiet
 RewriteRule ^dich-vu/(.*)-([0-9]+).html$ index.php?mod=news&task=detail&link=$1&nid=$2 [L]
 # dich vu
