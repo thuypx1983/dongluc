@@ -51,7 +51,7 @@ class video extends base
         $this->smarty->assign("bread", array_reverse($bread));
 
         // lấy bài liên quan
-        $where = " WHERE id != '{$row['id']}' ";
+        $where = " WHERE id != '{$row['id']}' AND ads_type='flash'";
 
         $sql = "
 			SELECT id, title, concat('{$this->pre}', '/', link) as pre_link, photo, description
