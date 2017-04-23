@@ -30,7 +30,7 @@ class video extends base
 			SELECT *,
 			concat('{$this->pre}', '/', link) as pre_link
 			FROM {$this->table}
-			 id = '{$_GET['nid']}'
+			 WHERE id = '{$_GET['nid']}'
 		";
         echo $sql;
         $row = $this->db->getRow($sql);
