@@ -43,22 +43,11 @@ class video extends base
         //bread
         $_GET['id'] = $row['news_category_id'];
         if ($_GET['nid'] != '') {
-            $_GET['menu_type'] = 'dich-vu';
+            $_GET['menu_type'] = 'videos';
             $bread = array();
-            $temp = $this->db->getRow("select id, title, link, parent_id, concat('{$_GET['menu_type']}', '/', link) as pre_link from {$this->table_category} {$this->where} AND id = '{$_GET['id']}' ");
-            $bread[] = $temp;
-            if ($temp['parent_id'] > 0) {
-                $temp = $this->db->getRow("select id, title, link, parent_id, concat('{$_GET['menu_type']}', '/', link) as pre_link from {$this->table_category} {$this->where} AND id = '{$temp['parent_id']}' ");
-                $bread[] = $temp;
-                if ($temp['parent_id'] > 0) {
-                    $temp = $this->db->getRow("select id, title, link, parent_id, concat('{$_GET['menu_type']}', '/', link) as pre_link from {$this->table_category} {$this->where} AND id = '{$temp['parent_id']}' ");
-                    $bread[] = $temp;
-                    if ($temp['parent_id'] > 0) {
-                        $temp = $this->db->getRow("select id, title, link, parent_id, concat('{$_GET['menu_type']}', '/', link) as pre_link from {$this->table_category} {$this->where} AND id = '{$temp['parent_id']}' ");
-                        $bread[] = $temp;
-                    }
-                }
-            }
+            $bread[]=array('id'=>1, 'title'=>'video', 'link'=>'/video/', 'parent_id'=>0, 'pre_link'=>'/video/' );
+
+
         }
         #echo '<pre>'; print_r($bread); echo '</pre>';
         $this->smarty->assign("bread", array_reverse($bread));
