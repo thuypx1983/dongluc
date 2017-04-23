@@ -132,9 +132,6 @@
         <input type="button" name="Submit3" value="{#button_back#}" onclick="location.href='{$smarty.session.grid_url}'"/></td>
     </tr>
   </table>
-    <fieldset>
-        <title></title>
-    </fieldset>
 
   
 </form>

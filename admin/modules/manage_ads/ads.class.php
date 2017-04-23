@@ -67,7 +67,7 @@ class ads extends base
                 "content"            =>$_POST["content"]."",
                 "seo_keyword"            =>$_POST["seo_keyword"]."",
                 "seo_title"            =>$_POST["seo_title"]."",
-                "seo_descption"            =>$_POST["seo_descption"]."",
+                "seo_description"            =>$_POST["seo_description"]."",
 			);
 
 			/*if ($_POST['link'] != '')
@@ -132,7 +132,7 @@ class ads extends base
 				"content"            =>$_POST["content"]."",
 				"seo_keyword"            =>$_POST["seo_keyword"]."",
 				"seo_title"            =>$_POST["seo_title"]."",
-				"seo_descption"            =>$_POST["seo_descption"]."",
+				"seo_description"            =>$_POST["seo_description"]."",
 			);
 			
 			if ($_POST['link'] != '')
