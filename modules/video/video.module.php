@@ -15,7 +15,7 @@ class video extends base
                 $this->detail();
                 break;
         case "list":
-                $this->detail();
+                $this->showList();
                 break;
 
         }
@@ -140,69 +140,6 @@ class video extends base
         }
         $this->smarty->assign("numrows", $numrows);
         $this->smarty->display('showList.tpl');
-
-        return;
-        $title = $this->db->getOne("SELECT title FROM {$this->table_type} WHERE link = '{$_GET['menu_type']}' ");
-        $this->smarty->assign("row_title", $title);
-
-        $title_sub = $this->db->getOne("SELECT title FROM {$this->table_category} WHERE id = '{$_GET['id']}' ");
-        $this->smarty->assign("row_title_sub", $title_sub);
-
-        $where = " AND menu_type = '{$_GET['menu_type']}' ";
-        $where .= " AND news_category_id = '{$_GET['id']}' ";
-
-        $cateinfo = $this->db->getRow("SELECT id, title, link, page_template, concat('{$this->pre}', '/', link) as pre_link FROM {$this->table_category} WHERE id = '{$_GET['id']}' ");
-        $cate_link = "/" . $cateinfo["link"] . "-" . $cateinfo["id"];
-
-        if ($cateinfo['page_template'] != '') {
-
-            $this->page_template($cateinfo['page_template']);
-
-            return;
-        }
-
-        // phuc vu cho paging
-        $page = isset($_GET['page']) ? $_GET['page'] : 1;
-        $limit = 8;
-        $start = $limit * ($page - 1);
-
-        $sql = "
-			SELECT *,
-			concat(menu_type, '/', link) as pre_link
-			FROM {$this->table} 
-			{$this->where} $where
-			{$this->order}
-			LIMIT $start, $limit
-		";
-        $rows = $this->db->getAll($sql);
-        #echo "<pre>";print_r($rows);echo "</pre>";
-        echo mysql_error();
-
-        foreach ($rows as $k => $v) {
-            $rows[$k]["title"] = stripslashes($v["title"]);
-            //$rows[$k]["content"] = stripslashes($v["content"]);
-            //$rows[$k]["photo"] = str_replace("upload/editor/", SITE_URL."upload/editor/", $this->getSrcImg($v['content']));
-        }
-
-        $this->smarty->assign("rows", $rows);
-
-        $text_link_page = ($_SESSION["lang"] == "vi") ? "trang" : "page";
-
-        $action_path = SITE_URL . $_GET['menu_type'] . $cate_link . $search_link . "/{$text_link_page}-{i}/";
-
-        $numrows = $this->db->getOne("SELECT count(id) FROM {$this->table} {$this->where} $where ");
-        $oPaging = new Paging($numrows, $limit, Null, "page");
-        $oPaging->set_current_page($page);
-        $oPaging->set_action_path($action_path);
-        $oPaging->set_site_url(SITE_URL);
-
-        if ($numrows > $limit) {
-            $this->smarty->assign("paging", $oPaging->string_paging());
-        }
-        $this->smarty->assign("numrows", $numrows);
-
-        $this->smarty->display('showList.tpl');
-
     }
 }
 
