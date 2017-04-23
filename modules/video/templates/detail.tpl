@@ -59,7 +59,7 @@
                             <div class="item-inner">
                                 <div class="product-info row">
                                     <div class="col-lg-3" style="padding-left:0">
-                                        <a href="/videos/{$row.id}.html"><img src="{$url}upload/ads/{$row.photo|default:'no-img.jpg'}" style="width:100%;"></a>
+                                        <a href="/videos/{$row.id}.html"><img src="{$url}upload/ads/video/{$row.photo|default:'no-img.jpg'}" style="width:100%;"></a>
                                     </div>
                                     <div class="col-lg-9">
                                         <div class="product-name">
