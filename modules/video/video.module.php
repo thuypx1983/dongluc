@@ -51,13 +51,11 @@ class video extends base
         $this->smarty->assign("bread", array_reverse($bread));
 
         // lấy bài liên quan
-        $where = " AND id != '{$row['id']}' ";
+        $where = " WHERE id != '{$row['id']}' ";
 
         $sql = "
 			SELECT id, title, concat('{$this->pre}', '/', link) as pre_link, photo, description
-			FROM {$this->table}
-			{$this->where} {$where} 
-		";
+			FROM {$this->table} {$where} ";
         $rows = $this->db->getAll($sql);
 
         #$rows = $this->db->getAll($sql);
