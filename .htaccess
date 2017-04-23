@@ -54,3 +54,8 @@ RewriteRule ^(.*)-([0-9]+)/(.*)$ index.php?mod=product&task=list&cate=$1&id=$2&f
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)-([0-9]+)/$ index.php?mod=product&task=list&cate=$1&id=$2 [L]
+
+# video
+RewriteRule ^videos/trang-([0-9]+)/$ index.php?mod=video&task=list&page=$1 [L]
+RewriteRule ^videos/$ index.php?mod=news&task=list [L]
+RewriteRule ^videos/(.*)-([0-9]+).html$ index.php?mod=video&task=detail&id=$2 [L]
