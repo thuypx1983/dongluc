@@ -32,9 +32,8 @@ class video extends base
 			FROM {$this->table}
 			 WHERE id = '{$_GET['nid']}'
 		";
-        echo $sql;
         $row = $this->db->getRow($sql);
-
+        print_r($row);
         $row["content"] = stripslashes($row["content"]);
         $row["title"] = stripslashes($row["title"]);
         $row["content"] = str_replace("upload/editor/", SITE_URL . "upload/editor/", $row["content"]);
