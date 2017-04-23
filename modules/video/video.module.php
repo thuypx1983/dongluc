@@ -1,5 +1,5 @@
 <?php
-class news extends base
+class video extends base
 {
     var $table = "ads";
 
