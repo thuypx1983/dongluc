@@ -134,6 +134,40 @@ class video extends base
         $this->smarty->assign("numrows", $numrows);
         $this->smarty->display('showList.tpl');
     }
+
+    function getPageinfo($task="")
+    {
+        $page= array("");
+        switch($task)
+        {
+            case "list":
+                $row = array(
+                    'title'       => 'Videos',
+                    'description' => 'Videos',
+                    'keyword'     => 'Videos'
+                );
+                break;
+            case "detail":
+
+                $row = $this->db->getRow("select * from {$this->table} where id=".$_GET['nid']);
+        }
+
+        $strip = $row['seo_description'];
+        if($strip=='') {
+            $strip = strip_tags($row['content']);
+            $strip = trim(substr($strip, 0, 170))."...";
+        }
+
+        $page["title"]= ($row["seo_title"]!='')?$row["seo_title"]:$row["title"];
+        $page["title"] = stripslashes($page["title"]);
+        $page["description"] = html_entity_decode($strip, ENT_QUOTES, "UTF-8");
+        $page["keyword"]= $row["seo_keyword"];
+        $text_link_page = ($_SESSION["lang"]=="vi")?"Trang":"Page";
+        if($_GET['page']>0) {
+            $page["title"] .= " - ".$text_link_page." ".$_GET['page'];
+        }
+        return $page;
+    }
 }
 
 ?>
