@@ -59,22 +59,18 @@
                             <div class="item-inner">
                                 <div class="product-info row">
                                     <div class="col-lg-3" style="padding-left:0">
-                                        <a href="{$url}{$row.pre_link}-{$row.id}.html"><img src="{$url}upload/news/thumb/{$row.photo|default:'no-img.jpg'}" style="width:100%;"></a>
+                                        <a href="/videos/{$row.id}.html"><img src="{$url}upload/ads/{$row.photo|default:'no-img.jpg'}" style="width:100%;"></a>
                                     </div>
                                     <div class="col-lg-9">
                                         <div class="product-name">
-                                            <h2><a class="title-blog-name" href="{$url}{$row.pre_link}-{$row.id}.html">{$row.title}</a></h2>
+                                            <h2><a class="title-blog-name" href="/videos/{$row.id}.html">{$row.title}</a></h2>
                                             <!--<h3>3/6/2014 12:58 AM</h3>-->
                                             <div class="info-cat-blog"> {$row.create_date} </div>
-                                            <p class="desc_just">{$row.description|truncate:400}</p>
+                                            <p class="desc_just">{$row.summary|truncate:400}</p>
                                         </div>
                                     </div>
                                     <div class="clear"></div>
-                                    {if ($k+1) < count($rows)}
-                                        <div class="postContent ">
-                                            <div class="bottom-info-blog"> </div>
-                                        </div>
-                                    {/if}
+
                                 </div>
                             </div>
                         </li>
