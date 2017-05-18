@@ -29,9 +29,8 @@ $redirectUri = isset($_SERVER['HTTPS']) ? 'https://' : 'http://' . $_SERVER['HTT
 //$redirectUri = 'http://localhost/phpmailer/get_oauth_token.php';
 
 //These details obtained are by setting up app in Google developer console.
-$clientId = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
-$clientSecret = 'RANDOMCHARS-----lGyjPcRtvP';
-
+$clientId = '867015879848-5ra20jr1g996tkdeul2444tmnp6qlp65.apps.googleusercontent.com';
+$clientSecret = 'r7n7DEmVph1qWY8lWfL3qGlw';
 class Google extends AbstractProvider
 {
     use BearerAuthorizationTrait;
