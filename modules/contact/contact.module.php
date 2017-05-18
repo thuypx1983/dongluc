@@ -70,7 +70,6 @@ class contact extends base
 				$email_contact = $this->db->getOne("select email_contact from contact");
 				$email_contact = $email_contact!=''?$email_contact:"hung.ngo@netlink.vn";
 				$email_contact = trim($email_contact);
-				$email_contact = 'thuypx1983@gmail.com';
 
 				if(!sendMail($email_contact, $_POST['fullname'], $subject, $content, $_POST['email'], $_POST['email']))
 				{
@@ -122,7 +121,6 @@ class contact extends base
 				$email_contact = $this->db->getOne("select email_contact from contact");
 				$email_contact = $email_contact!=''?$email_contact:"hung.ngo@netlink.vn";
 				$email_contact = trim($email_contact);
-                $email_contact = 'thuypx1983@gmail.com';
 				
 				if(!sendMail($email_contact, $_POST['fullname'], $subject, $content, $_POST['email'], $_POST['email']))
 				{
@@ -130,7 +128,7 @@ class contact extends base
 				}
 				else
 				{
-					alert("Đ ã gửi thành công, chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất!");
+					alert("Đã gửi thành công, chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất!");
 				}
 			}
 		}
