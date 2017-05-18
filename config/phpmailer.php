@@ -1,5 +1,5 @@
 <?php
-	include("lib/phpmailer/class.phpmailer.php");
+	include("lib/PHPMailer/PHPMailerAutoload.php");
 	global $mail;
 	
 	$mail = new phpmailer();
@@ -61,7 +61,6 @@
 	function sendMail($to_email, $to_name, $subject, $body, $reply_email= "", $reply_name= "", $from_email= "", $from_name= "")
 	{
 		global $mail, $signature;
-        print_r($mail);
 		if($from_email!="")
 			$mail->SetFrom($from_email, $from_name);
 			
