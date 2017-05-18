@@ -1,6 +1,5 @@
 <?php
-	//include("lib/phpmailer/class.phpmailer.php");
-    require_once realpath('lib/PHPMailer/PHPMailerAutoload.php');
+	include("lib/phpmailer/class.phpmailer.php");
 	global $mail;
 	
 	$mail = new phpmailer();
