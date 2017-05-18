@@ -61,7 +61,7 @@
 	function sendMail($to_email, $to_name, $subject, $body, $reply_email= "", $reply_name= "", $from_email= "", $from_name= "")
 	{
 		global $mail, $signature;
-
+        print_r($mail);
 		if($from_email!="")
 			$mail->SetFrom($from_email, $from_name);
 			
