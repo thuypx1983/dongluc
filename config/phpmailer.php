@@ -3,7 +3,7 @@
 	global $mail;
 	
 	$mail = new phpmailer();
-    //$mail->SMTPDebug  = 2;
+    $mail->SMTPDebug  = 2;
 	$mail->CharSet	  =	"utf8";
 	$mail->IsHTML(true);
 	$mail->Mailer   = "smtp";

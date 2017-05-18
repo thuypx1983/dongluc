@@ -130,7 +130,7 @@ class contact extends base
 				}
 				else
 				{
-					alert("Đã gửi thành công, chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất!");
+					alert("Đ ã gửi thành công, chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất!");
 				}
 			}
 		}
