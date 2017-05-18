@@ -11,8 +11,8 @@
   	$mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
 	$mail->SMTPAuth= true;	
 	$mail->Port       = 465; 
-	$mail->Username= "thuypx1983@gmail.com";
-	$mail->Password= "pHamtRucaN09042013";
+	$mail->Username= "thuypx@oms.vn";
+	$mail->Password= "FoDX6tJv";
 	$mail->SetFrom("webmaster@palatinostudio.com", "Webmaster Dongluc.vn");
 	
 /*	
