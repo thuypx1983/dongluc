@@ -1,9 +1,9 @@
 <?php
-	include("lib/phpmailer/class.phpmailer.php");
+	include("lib/PHPMailer/PHPMailerAutoload.php");
 	global $mail;
 	
 	$mail = new phpmailer();
-	
+    $mail->SMTPDebug  = 2;
 	$mail->CharSet	  =	"utf8";
 	$mail->IsHTML(true);
 	$mail->Mailer   = "smtp";
@@ -11,8 +11,8 @@
   	$mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
 	$mail->SMTPAuth= true;	
 	$mail->Port       = 465; 
-	$mail->Username= "palatinostudio@gmail.com";
-	$mail->Password= "palatino2014@";
+	$mail->Username= "thuypx@oms.vn";
+	$mail->Password= "FoDX6tJv";
 	$mail->SetFrom("webmaster@palatinostudio.com", "Webmaster Dongluc.vn");
 	
 /*	
@@ -61,7 +61,6 @@
 	function sendMail($to_email, $to_name, $subject, $body, $reply_email= "", $reply_name= "", $from_email= "", $from_name= "")
 	{
 		global $mail, $signature;
-
 		if($from_email!="")
 			$mail->SetFrom($from_email, $from_name);
 			
