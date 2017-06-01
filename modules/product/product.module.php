@@ -139,7 +139,8 @@ class product extends base
 	function list_top_home()
 	{
 		$rows = $this->db->getAll("
-				SELECT id, title, link, photo, code, price_sale, link_out
+				SELECT id, title, link, photo, code, price_sale, 
+				REPLACE( link_out, 'http://', 'https://' ) AS link_out
 				FROM {$this->table}
 				WHERE is_top = 1
 				ORDER BY z_index DESC LIMIT 20

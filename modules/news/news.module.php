@@ -245,6 +245,8 @@ class news extends base
 			/*$where = " AND news_category_id = '{$_GET['id']}' ";*/			
 			$where .= " AND ( news_category_id = '{$_GET['id']}' OR news_category_id IN (SELECT id FROM {$this->table_category} WHERE parent_id = '{$_GET['id']}' ) OR news_category_id IN (SELECT id FROM {$this->table_category} WHERE parent_id IN (SELECT id FROM {$this->table_category} where parent_id = '{$_GET['id']}' ) ) ) ";
 			$category = $_GET['cate']."-".$_GET['id']."/";
+		}else{
+		$where.=" AND news_category_id!=18 ";
 		}
 		// phuc vu cho paging
 		$page = isset($_GET['page'])?$_GET['page']:1;
@@ -256,7 +258,7 @@ class news extends base
 			concat('{$this->pre}', '/', link) as pre_link
 			FROM {$this->table}
 			{$this->where} $where
-			{$this->order}
+			ORDER BY `create_date` DESC
 			LIMIT $start, $limit
 		";
 		$rows = $this->db->getAll($sql);

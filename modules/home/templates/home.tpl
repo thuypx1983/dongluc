@@ -3,6 +3,7 @@
 <div class="news-highlight">
     {loadModule mod=news task=highlight_left}
     {loadModule mod=news task=highlight_right}
+    {loadModule mod=ads task=banner_highlight_left limit=3}
 </div>
 <div class="videos">
     <div class="block-title">
