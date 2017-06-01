@@ -23,7 +23,7 @@ class ads extends base {
 		if($ex[0]=='footer') {
 			$temp = "footer";
 		}
-		$rows = $this->db->getAll("SELECT id, photo, title, link, target, embed, ads_type FROM ads {$this->where} AND position = '{$pos}' {$where} {$this->order} ");
+		$rows = $this->db->getAll("SELECT * FROM ads {$this->where} AND position = '{$pos}' {$where} {$this->order} ");
 		echo mysql_error();
 		foreach ($rows as $k => $v) {
             if($pos=='video'){
