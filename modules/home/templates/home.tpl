@@ -3,6 +3,13 @@
 <div class="news-highlight">
     {loadModule mod=news task=highlight_left}
     {loadModule mod=news task=highlight_right}
+    {loadModule mod=ads task=banner_highlight_left}
+</div>
+<div class="videos">
+    <div class="block-title">
+        <span>Video</span>
+    </div>
+    {loadModule mod=ads task=video}
 </div>
 <div class="news-category">
     {loadModule mod=ads task=homecategory}
@@ -10,12 +17,6 @@
 </div>
 
 
-<div class="videos">
-    <div class="block-title">
-        <span>Video</span>
-    </div>
-    {loadModule mod=ads task=video}
-</div>
 <div class="news-service">
     <div class="block-title">
         <span>Dịch vụ</span>
