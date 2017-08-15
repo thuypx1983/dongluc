@@ -824,9 +824,16 @@ class product extends base
 			}
 		}
 		$this->smarty->assign("cats", $cats);
-		
+
+
+        //tintuc
+        $subnews = $this->db->getAll("SELECT * FROM  `news_category` WHERE parent_id = 18 ");
+		$this->smarty->assign("subnews", $subnews);
+
 		$this->smarty->assign("region", $region);
 		$this->smarty->display("menu.tpl");
+
+
 	}
 
 	function menu_home() {

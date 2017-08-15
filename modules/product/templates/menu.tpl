@@ -59,7 +59,15 @@
                 {/if}
             </li>
             <!-- <li><a href="{$url}doi-tac/"  {if $smarty.get.mod=='partner'}class="active"{/if}>Đối tác</a></li> -->
-			<li><a href="/dich-vu/tin-tuc-18/">Tin tức</a></li>
+			<li>
+                <a href="/dich-vu/tin-tuc-18/">Tin tức</a>
+                <ul class="sub_menu">
+                    {foreach from=$subnews item=re}
+                        <li><a href="/dich-vu/{$re.link}-{$re.id}/">{$re.title}</a></li>
+                    {/foreach}
+
+                </ul>
+            </li>
             <li><a href="https://donglucsport.com/" target="_blank" title="Xuất khẩu" rel="nofollow">Xuất khẩu</a></li>
             <li><a href="{$url}lien-he.html"  {if $smarty.get.mod=='contact'}class="active"{/if}>Liên hệ</a></li>
           </ul>
