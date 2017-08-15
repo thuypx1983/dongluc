@@ -215,7 +215,7 @@ class CKFinder_Connector_Core_AccessControlConfig
                 $_rulesMasks = $_folderEntries[$_possibleKey];
 
                 $currentMask |= array_sum($_rulesMasks[0]);
-                $currentMask ^= ($currentMask & array_sum($_rulesMasks[1]));
+                $currentMask ^= ($currentMask & array_sum($_rulesMasks[1]));
             }
         }
 

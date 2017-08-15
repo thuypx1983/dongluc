@@ -6,27 +6,27 @@
                     <div class="row">
                             <div class="bst-col">
 								<div class="newsletters-img-wrapper">
-									<img src="/images/SVDV-2.png" alt="Giải thưởng Sao Vàng Đất Việt" title="Giải thưởng Sao Vàng Đất Việt" />                                        
+									<img class="lazyload" data-src="/images/SVDV-2.png" alt="Giải thưởng Sao Vàng Đất Việt" title="Giải thưởng Sao Vàng Đất Việt" />                                        
 								</div>
                             </div>
                             <div class="bst-col">
 								<div class="newsletters-img-wrapper">
-									<img src="/images/HVNCLC-2.png" alt="Hàng Việt Nam chất lượng cao" title="Hàng Việt Nam chất lượng cao" />                                        
+									<img class="lazyload" data-src="/images/HVNCLC-2.png" alt="Hàng Việt Nam chất lượng cao" title="Hàng Việt Nam chất lượng cao" />                                        
 								</div>
                             </div>
 							<div class="bst-col">
 								<div class="newsletters-img-wrapper">
-									<img src="/images/chung-chi-ISO_9001-4.png" alt="" title="" />                                        
+									<img class="lazyload" data-src="/images/chung-chi-ISO_9001-4.png" alt="" title="" />                                        
 								</div>
                             </div>
 							<div class="bst-col">
 								<div class="newsletters-img-wrapper">
-									<img src="/images/chung-chi-wfsgi-3.png" alt="" title="" />                                        
+									<img class="lazyload" data-src="/images/chung-chi-wfsgi-3.png" alt="" title="" />                                        
 								</div>
                             </div>
 							<div class="bst-col">
 								<div class="newsletters-img-wrapper">
-									<img src="/images/chung-chi-sgs-3.png" alt="" title="" />                                        
+									<img class="lazyload" data-src="/images/chung-chi-sgs-3.png" alt="" title="" />                                        
 								</div>
                             </div>
 							
@@ -53,8 +53,8 @@
                     <ul class="fpl">
                         <li><i class="fa fa-home"></i> <b>Địa chỉ:</b> 130 phố Hạ Đình, quận Thanh Xuân, Hà Nội (Trụ sở chính Văn phòng làm việc)</li>
                         <li><i class="fa fa-phone"></i> <b>Điện thoại:</b> (+84) 168 738 8888</li>
-    					<li><i class="fa fa-phone-square "></i> <b>Hotline</b> (+84) 43 858 4127 - ext. 131</li>
-                        <li><i class="fa fa-fax"></i> <b>Fax:</b> (+84)4 3858 2987</li>
+    					<li><i class="fa fa-phone-square "></i> <b>Hotline</b> (+84) 243 858 4127 - ext. 131</li>
+                        <li><i class="fa fa-fax"></i> <b>Fax:</b> (+84)24 3858 2987</li>
                         <li><i class="fa fa-envelope"></i> <b>Email:</b> donglucshopvn@gmail.com</li>
                     </ul>
                 </div>
@@ -255,16 +255,16 @@
                     </ul>
                     <div class="hidden-xs hidden-sm">
                         <div class="footer-img-wrapper">
-                            <img src="http://donglucshop.vn/apt-upload/image/cache/data/banner/footer/bf1-200x179.png" alt="Động Lực" title="Động Lực" />
+                            <img class="lazyload" data-src="https://donglucshop.vn/apt-upload/image/cache/data/banner/footer/bf1-200x179.png" alt="Động Lực" title="Động Lực" />
                         </div>
                         <div class="footer-img-wrapper">
-                            <img src="http://donglucshop.vn/apt-upload/image/cache/data/banner/footer/bf2-200x179.png" alt="Động Lực" title="Động Lực" />
+                            <img class="lazyload" data-src="https://donglucshop.vn/apt-upload/image/cache/data/banner/footer/bf2-200x179.png" alt="Động Lực" title="Động Lực" />
                         </div>
                         <div class="footer-img-wrapper">
-                            <img src="http://donglucshop.vn/apt-upload/image/cache/data/banner/footer/bf3-200x179.png" alt="Động Lực" title="Động Lực" />
+                            <img class="lazyload" data-src="https://donglucshop.vn/apt-upload/image/cache/data/banner/footer/bf3-200x179.png" alt="Động Lực" title="Động Lực" />
                         </div>
                         <div class="footer-img-wrapper">
-                            <img src="http://donglucshop.vn/apt-upload/image/cache/data/banner/footer/bf4-200x179.png" alt="Động Lực" title="Động Lực" />
+                            <img class="lazyload" data-src="https://donglucshop.vn/apt-upload/image/cache/data/banner/footer/bf4-200x179.png" alt="Động Lực" title="Động Lực" />
                         </div>
                     </div>
                 </div>
@@ -290,8 +290,7 @@
     <div id="powered" class="hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
-                <div class="bst-col">© 2017 Động Lực Group. All Right Reserved - Thiết kế bởi <a href="http://aptech.net.vn/" style="font-size:14px;color:#fff;" target="_blank">Aptech IT</a>
-                </div>
+                <div class="bst-col">© 2017 Động Lực Group. All Right Reserved</div>
                 <div class="bst-col">
                     <hr class="hidden-lg hidden-md" />
                     <ul class="pull-right">
@@ -305,121 +304,133 @@
         </div>
     </div> <!--/#powered-->
 	
-	<script type="text/javascript">
-    $(document).ready(function(){
-    	// Function for navbar
-    	var locationLink = {
-    		isActive: false,
-            isActiveId: 0,
-    		toggleStatus: function(){
-    			locationLink.isActive = !locationLink.isActive;
-    		},
-    		active: function(id) {
-                var selector = "#location-" + id;
-    			$(selector).css("opacity", "1").css("display", "block");
-    			$("#location-bg").css("opacity", "1").css("display", "block");
-    		},
-    		inactive: function(id) {
-    			var selector = "#location-" + id;
-                $(selector).css("opacity", "0").css("display", "none");
-    			$("#location-bg").css("opacity", "0").css("display", "none");
-    		},
-            close: function(){
-                if (locationLink.isActive) {
-                locationLink.inactive(locationLink.isActiveId);
-                locationLink.toggleStatus(); 
-            }
-            }
-    	};
-        
-        $("#footer a[class^='open-location-']").click(function(){
-            locationLink.isActiveId = $(this).attr("class").slice(-1);
-            if (!locationLink.isActive) {
-    			locationLink.active(locationLink.isActiveId);
-    		} else {
-    			locationLink.inactive(locationLink.isActiveId);
-    		}
-            locationLink.toggleStatus();
-        });
-    	
-    	// Click onpage to close
-    	$(".modal").click(function(e){
-    	    if (e.target === this){
-                locationLink.close();
- 	        }    		                
-    	});
-        
-        $("button.close").click(function(){
-            locationLink.close();
-        });
-         
-    });
-    </script>
-	
-<script>
+<script type="text/javascript">
+	window.addEventListener('DOMContentLoaded', function() {
+		(function($) {
+			$(document).ready(function() {
+				// Function for navbar
+				var locationLink = {
+					isActive: false,
+					isActiveId: 0,
+					toggleStatus: function(){
+						locationLink.isActive = !locationLink.isActive;
+					},
+					active: function(id) {
+						var selector = "#location-" + id;
+						$(selector).css("opacity", "1").css("display", "block");
+						$("#location-bg").css("opacity", "1").css("display", "block");
+					},
+					inactive: function(id) {
+						var selector = "#location-" + id;
+						$(selector).css("opacity", "0").css("display", "none");
+						$("#location-bg").css("opacity", "0").css("display", "none");
+					},
+					close: function(){
+						if (locationLink.isActive) {
+						locationLink.inactive(locationLink.isActiveId);
+						locationLink.toggleStatus(); 
+					}
+					}
+				};
+				
+				$("#footer a[class^='open-location-']").click(function(){
+					locationLink.isActiveId = $(this).attr("class").slice(-1);
+					if (!locationLink.isActive) {
+						locationLink.active(locationLink.isActiveId);
+					} else {
+						locationLink.inactive(locationLink.isActiveId);
+					}
+					locationLink.toggleStatus();
+				});
+				
+				// Click onpage to close
+				$(".modal").click(function(e){
+					if (e.target === this){
+						locationLink.close();
+					}    		                
+				});
+				
+				$("button.close").click(function(){
+					locationLink.close();
+				});
+				
+				
+				// Others
+				$(".menu_drop_mobile").click(function() {
+					$('.more_menu').toggleClass('active');
+					$('.menu_left_mobile').toggleClass('active_menu');
+					$('.header').toggleClass('active_main');
+					$('.close_menu').toggleClass('active');
+				});
 
-$(document).ready(function(){
-$( ".menu_drop_mobile" ).click(function() {
-      $('.more_menu').toggleClass('active');
-      
-      $('.menu_left_mobile').toggleClass('active_menu');
-      $('.header').toggleClass('active_main');
-      $('.close_menu').toggleClass('active')
-     
-  });
-  $( ".btn_menu" ).click(function() {
-  $('.menu_show').toggleClass('active');
-  $('.wrapper').toggleClass('active');
-  $('.header').toggleClass('active');
-  $('.close_menu').toggleClass('active')
-});
-  
-  $( ".close_menu" ).click(function() {
-      $('.menu_drop_mobile').removeClass('active');
-      $('.close_menu').removeClass('active')
-      $('.menu_left_mobile').removeClass('active_menu');
-      $('.header').removeClass('active_main');
-      $('.menu_show').removeClass('active');
-  $('.wrapper').removeClass('active');
-  $('.header').removeClass('active');
-  $('.close_menu').removeClass('active')
-      
-     
-  });
-})
+				$(".btn_menu").click(function() {
+					$('.menu_show').toggleClass('active');
+					$('.wrapper').toggleClass('active');
+					$('.header').toggleClass('active');
+					$('.close_menu').toggleClass('active')
+				});
 
+				$( ".close_menu" ).click(function() {
+					$('.menu_drop_mobile').removeClass('active');
+					$('.close_menu').removeClass('active')
+					$('.menu_left_mobile').removeClass('active_menu');
+					$('.header').removeClass('active_main');
+					$('.menu_show').removeClass('active');
+					$('.wrapper').removeClass('active');
+					$('.header').removeClass('active');
+					$('.close_menu').removeClass('active');
+				});
+				
+				$('#cssmenu1 > ul > li:has(ul)').addClass("has-sub");
 
-$(document).ready(function(){
+				$('#cssmenu1 > ul > li > a > i').click(function() {
+					var checkElement = $(this).parent().next();
+					
+					$('#cssmenu1 li').removeClass('active');
+					$(this).closest('li').addClass('active');     
+					
+					if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+						$(this).closest('li').removeClass('active');
+						checkElement.slideUp('normal');
+					}
+					
+					if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						$('#cssmenu1 ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+					}
+					
+					if (checkElement.is('ul')) {
+						return false;
+					} else {
+						return true;  
+					}   
+				});
 
-  $('#cssmenu1 > ul > li:has(ul)').addClass("has-sub");
-
-  $('#cssmenu1 > ul > li > a > i').click(function() {
-    var checkElement = $(this).parent().next();
-    
-    $('#cssmenu1 li').removeClass('active');
-    $(this).closest('li').addClass('active'); 
-    
-    
-    if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
-      $(this).closest('li').removeClass('active');
-      checkElement.slideUp('normal');
-    }
-    
-    if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
-      $('#cssmenu1 ul ul:visible').slideUp('normal');
-      checkElement.slideDown('normal');
-    }
-    
-    if (checkElement.is('ul')) {
-      return false;
-    } else {
-      return true;  
-    }   
-  });
-
-});
-
+				$(window).scroll(function() {
+					if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+						$('#return-to-top').fadeIn(300);    // Fade in the arrow
+					} else {
+						$('#return-to-top').fadeOut(300);   // Else fade out the arrow
+					}
+				});
+				$('#return-to-top').click(function() {      // When arrow is clicked
+					$('body,html').animate({
+						scrollTop : 0                       // Scroll to top of body
+					}, 500);
+				});
+				
+				$(function(){
+					$(window).load(function(){
+						$("#header").sticky({ topSpacing: 0 });
+					});
+				})
+				
+			});
+		})(jQuery);
+	});
 </script>
+	
+
 <!-- 
 <script type="text/javascript">
 $(function(){
@@ -490,31 +501,6 @@ $(window).scroll(function() {
     
 }
 </style>
-<script type="text/javascript">
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(300);    // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(300);   // Else fade out the arrow
-    }
-});
-$('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 500);
-});
-</script>
-
-<script>
-  (function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments) },i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-68217925-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 <!-- google plug plugin -->
 <!-- Place this tag in your head or just before your close body tag. -->
@@ -529,5 +515,12 @@ $('#return-to-top').click(function() {      // When arrow is clicked
         js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=603747746459920";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+	
+<link type="text/css" href="{$url}css/dongluc.css" rel="stylesheet">
+<link type="text/css" href="{$url}css/custom.css" rel="stylesheet">
+<link type="text/css" href="{$url}js/slick-1.6.0/slick.css" rel="stylesheet">
+<link type="text/css" href="{$url}css/jquery.fancybox.css" rel="stylesheet">
+<link type="text/css" href="{$url}css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 </body>
 </html>

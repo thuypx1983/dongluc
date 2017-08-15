@@ -73,7 +73,14 @@ class product extends base
 				break;
 			case "rating": 
 				$this->rating(); 
-				break;	
+				break;
+            case 'redirect':
+                $pid=(int)$_GET['pid'];
+                $row = $this->db->getRow("SELECT * FROM {$this->table} WHERE id = {$pid} ");
+                header("HTTP/1.1 301 Moved Permanently");
+                header("Location: ".$row['link_out']);
+                exit();
+                break;
 			default: case "list": 
 				$this->showList(); 
 				break;

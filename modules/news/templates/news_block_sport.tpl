@@ -1,12 +1,12 @@
 <div class="news-sport">
-    <div class="block-title">
+    <h2 class="block-title">
         <a href="#">Tin tức thể thao</a>
-    </div>
+    </h2>
     <ul class="news-items">
         {foreach from=$rows item=row key=k}
-            <li class="news-item"> <img src="{$url}upload/news/{$row.photo|default:'no-img.jpg'}" width="70" style="float: left; margin-right: 10px">
+            <li class="news-item"> <img class="lazyload" data-src="{$url}upload/news/{$row.photo|default:'no-img.jpg'}" width="70" style="float: left; margin-right: 10px">
                 <div class="info-blog-w">
-                    <a class="blog-title-link" href="{$url}{$row.pre_link}-{$row.id}.html">{$row.title}</a>
+                    <h3><a class="blog-title-link" href="{$url}{$row.pre_link}-{$row.id}.html">{$row.title}</a></h3>
                     <span class="news-summary">{$row.description}</span>
                 </div>
             </li>

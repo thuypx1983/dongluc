@@ -420,7 +420,7 @@ class news extends base
 
     function highlight_left(){
         $rows = $this->db->getAll("
-			SELECT id, concat('{$this->pre}', '/', link) as pre_link, title, photo FROM {$this->table}
+			SELECT id, concat('{$this->pre}', '/', link) as pre_link, title, photo,`description` FROM {$this->table}
 			{$this->where} AND is_top = 1
 			{$this->order}
 			LIMIT 0,1

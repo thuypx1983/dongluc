@@ -6,7 +6,7 @@
                 <li class="partner-item">
 					<div class="partner-item-wrapper">
 						<a href="{$row.link}" {if !$row.link}onclick="return false"{/if} title="{$row.title}" target="{$row.target}">
-							<img src="{$url}upload/ads/{$row.photo}" alt="{$row.title}" />
+							<img class="lazyload" data-src="{$url}upload/ads/{$row.photo}" alt="{$row.title}" />
 						</a>
 					</div>
 				</li>

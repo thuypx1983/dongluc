@@ -3,25 +3,82 @@
 
         <div class="col70per fr">
             <!-- <a href="{$url}dich-vu/" class="head_title">Dịch vụ</a> -->
-
+			
+			<style type="text/css">
+			.breadcumb_product li {
+				display: inline-block;
+			}
+			</style>
+			
             <div class="breadcumb_product pkg">
-                <div class="fl">
-                    <a href="{$url}dich-vu/" class="first_bread">
+                <ol class="fl" vocab="http://schema.org/" typeof="BreadcrumbList">
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage"	href="{$url}dich-vu/">
+						  <span class="first_bread" property="name">Dịch vụ{if count($bread)>0}<span class="arr_bread"><img src="{$url}images/arr_brad.png"/></span>{/if}</span>
+						</a>
+						<meta property="position" content="1">
+					</li>
+                    
+					<!--
+					<a href="{$url}dich-vu/" class="first_bread">
                         Dịch vụ{if count($bread)>0}<span class="arr_bread"><img src="{$url}images/arr_brad.png"/></span>{/if}
                     </a>
+					-->
+					
+					{$i = 2}
                     {foreach from=$bread item=bre key=k}
+
+						<li property="itemListElement" typeof="ListItem">
+							<a property="item" typeof="WebPage"	href="{$url}{if $bre.pre_link}{$bre.pre_link}-{$bre.id}/{/if}">
+							  <span property="name">{$bre.title}{if count($bread)>($k+1)}<span class="arr_bread"><img src="{$url}images/arr_brad.png"/></span>{/if}</span>
+							</a>
+							<meta property="position" content="{$i++}">
+						</li>
+					
+						<!--
                         <a href="{$url}{if $bre.pre_link}{$bre.pre_link}-{$bre.id}/{/if}">{$bre.title}</a>
                         {if count($bread)>($k+1)}<span class="arr_bread"><img src="{$url}images/arr_brad.png"/></span>{/if}
-
+						-->
+						
                     {/foreach}
-                </div>
+                </ol>
             </div>
 
             <div class="inner-post-wrapper" style="margin-top:20px">
                 <div class="detail-blog-post">
                     <div class="postWrapper">
                         <div class="postTitle">
-                            <h2>{$row.title}</h2>
+						<script type="application/ld+json">
+						{
+						  "@context": "http://schema.org",
+						  "@type": "NewsArticle",
+						  "headline": "{$row.title}",
+						  "image": {
+							"@type": "ImageObject",
+							"url": "{$url}upload/news/thumb/{$row.photo|default:'no-img.jpg'}",
+							"height": 696,
+							"width": 696
+						  },
+						  "datePublished": "{$row.create_date}",
+						  "dateModified": "{$row.create_date}",
+						  "author": {
+							"@type": "Person",
+							"name": "OMS MEDIA"
+						  },
+						   "publisher": {
+							"@type": "Organization",
+							"name": "Động Lực",
+							"logo": {
+							  "@type": "ImageObject",
+							  "url": "{$url}images/photo.png",
+							  "width": 600,
+							  "height": 60
+							}
+						  },
+						  "description": "{$row.description}"
+						}
+						</script>
+                            <h1>{$row.title}</h1>
                             <h3>{$row.create_date}</h3>
                             <div class="social-box">
                                 <div class="btn-google-plus">

@@ -1,6 +1,5 @@
 <div class=" menu_main">
           <ul>
-            <li><a href="{$url}" {if $smarty.get.mod==''}class="active"{/if}>Trang chủ</a></li>
             <li><a href="{$url}gioi-thieu/" {if $smarty.get.mod=='about'}class="active"{/if}>Giới thiệu</a> </li>
             <li><a href="{$url}san-pham/" {if $smarty.get.mod=='product'}class="active"{/if}>Sản phẩm</a>
             {if $rows}
@@ -60,7 +59,8 @@
                 {/if}
             </li>
             <!-- <li><a href="{$url}doi-tac/"  {if $smarty.get.mod=='partner'}class="active"{/if}>Đối tác</a></li> -->
-            <li><a href="/dich-vu/tin-tuc-18/">Tin tức</a></li>
+			<li><a href="/dich-vu/tin-tuc-18/">Tin tức</a></li>
+            <li><a href="https://donglucsport.com/" target="_blank" title="Xuất khẩu" rel="nofollow">Xuất khẩu</a></li>
             <li><a href="{$url}lien-he.html"  {if $smarty.get.mod=='contact'}class="active"{/if}>Liên hệ</a></li>
           </ul>
         </div>

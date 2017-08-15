@@ -7,7 +7,7 @@
 </div>
 <div class="videos">
     <div class="block-title">
-        <span>Video</span>
+        <h2><span>Video</span></h2>
     </div>
     {loadModule mod=ads task=video}
 </div>
@@ -19,20 +19,20 @@
 
 <div class="news-service">
     <div class="block-title">
-        <span>Dịch vụ</span>
+        <h2><span>Dịch vụ</span></h2>
     </div>
     {loadModule mod=news task=news_service}
 </div>
 
 <div class="popular-product">
 	<div class="block-title">
-        <span>Sản phẩm nổi bật</span>
+        <h2><span>Sản phẩm nổi bật</span></h2>
     </div>
 {loadModule mod=product task=list_top_home}
 </div>
 <div class="partner">
     <div class="block-title">
-        <span>Đối tác</span>
+        <h2><span>Đối tác</span></h2>
     </div>
     {loadModule mod=ads task=partner}
 </div>

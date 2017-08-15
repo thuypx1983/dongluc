@@ -13,8 +13,9 @@
 				{
 				  breakpoint: 769,
 				  settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
 					vertical: false,
+					arrows: false,
 					nextArrow: '<i class="fa fa-chevron-right custom-slick-arr slick-arr-right"></i>',
 					prevArrow: '<i class="fa fa-chevron-left custom-slick-arr slick-arr-left"></i>',
 				  }

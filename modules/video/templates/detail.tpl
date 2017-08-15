@@ -4,20 +4,33 @@
         <div class="col70per fr">
             <!-- <a href="{$url}dich-vu/" class="head_title">Dịch vụ</a> -->
 
+			<style type="text/css">
+			.breadcumb_product li {
+				display: inline-block;
+			}
+			</style>
+			
             <div class="breadcumb_product pkg">
-                <div class="fl">
-                    <a href="{$url}dich-vu/" class="first_bread">
-                        Dịch vụ{if count($bread)>0}<span class="arr_bread"><img src="{$url}images/arr_brad.png"/></span>{/if}
-                    </a>
-                    <a href="/videos/">Videos</a>
-                </div>
+                <ol class="fl" vocab="http://schema.org/" typeof="BreadcrumbList">
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage"	href="{$url}dich-vu/">
+						  <span class="first_bread" property="name">Dịch vụ{if count($bread)>0}<span class="arr_bread"><img src="{$url}images/arr_brad.png"/></span>{/if}</span>
+						</a>
+						<meta property="position" content="1">
+					</li>
+					
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href="/videos/"><span property="name">Videos</span></a>
+						<meta property="position" content="2">
+					</li>
+                </ol>
             </div>
 
             <div class="inner-post-wrapper" style="margin-top:20px">
                 <div class="detail-blog-post">
                     <div class="postWrapper">
                         <div class="postTitle">
-                            <h2>{$row.title}</h2>
+                            <h1>{$row.title}</h1>
                             <h3>{$row.create_date}</h3>
                             <div class="social-box">
                                 <div class="btn-google-plus">

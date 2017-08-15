@@ -1,4 +1,5 @@
 <?php
+ini_set("include_path", '/home/dongluc/php:' . ini_get("include_path") );
 if (get_magic_quotes_gpc()) {
     $process = array(&$_GET, &$_POST, &$_COOKIE, &$_REQUEST);
     while (list($key, $val) = each($process)) {
@@ -110,5 +111,12 @@ if(isset($_GET['ajax']))
 	loadModule($_GET['mod'], $_GET['task']);
 else
 	loadModule("layout");
-
+/*
+global  $oDb;
+$oDb->query("ALTER TABLE `ads` ADD `summary` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ,
+ADD `content` LONGTEXT NULL DEFAULT NULL ,
+ADD `seo_title` VARCHAR( 512 ) NULL DEFAULT NULL ,
+ADD `seo_keyword` VARCHAR( 512 ) NULL DEFAULT NULL ,
+ADD `seo_description` VARCHAR( 512 ) NULL DEFAULT NULL ;");
+*/
 ?>

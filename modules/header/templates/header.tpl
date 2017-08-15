@@ -7,20 +7,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="shortcut icon" href="{$url}images/photo.png" />
-<link type="text/css" href="{$url}css/dongluc.css" rel="stylesheet">
-<link type="text/css" href="{$url}css/jquery.bxslider.css" rel="stylesheet">
-<link type="text/css" href="{$url}css/custom.css" rel="stylesheet">
-<link type="text/css" href="{$url}js/slick-1.6.0/slick.css" rel="stylesheet">
-<link type="text/css" href="{$url}css/jquery.fancybox.css" rel="stylesheet">
-<link type="text/css" href="{$url}css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-<script type="text/javascript" src="{$url}js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="{$url}js/jquery-migrate-1.0.0.js"></script>
-<script type="text/javascript" src="{$url}js/jquery.bxslider.js"></script>
-<script src="{$url}js/jquery.sticky.js" type="text/javascript"></script>
-<script src="{$url}js/slick-1.6.0/slick.min.js" type="text/javascript"></script>
-<script src="{$url}js/jquery.fancybox.js" type="text/javascript"></script>
-<script src="{$url}js/custom.js" type="text/javascript"></script>
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"name": "Động Lực",
+	"url": "https://dongluc.vn"
+}
+</script>
+
+<script type="text/javascript" src="{$url}js/jquery-1.9.1.min.js" defer></script>
+<script type="text/javascript" src="{$url}js/lazysizes.min.js" defer></script>
+<script src="{$url}js/jquery.sticky.js" type="text/javascript" defer></script>
+<script src="{$url}js/slick-1.6.0/slick.min.js" type="text/javascript" defer></script>
+<script src="{$url}js/jquery.fancybox.js" type="text/javascript" defer></script>
+<script src="{$url}js/custom.js" type="text/javascript" defer></script>
 <script type="text/javascript"> var url = "{$url}"; </script>
 {getPageinfo}
 {literal}
@@ -37,34 +39,44 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T8XLFB9');</script>
+<!-- End Google Tag Manager -->
 {/literal}
 </head>
 
 <body>
-    <div class="close_menu"></div>
-<div id='cssmenu1' class="menu_left_mobile">
-<div class="pkg login_mobile" >
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8XLFB9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-<div class="login_cart pkg">
-    {loadModule mod=product task=cart_info}
-</div>
-    
-</div>
-  {loadModule mod=product task=category param=responsive}
-</div>
-<div class="menu_show">
-    {loadModule mod=product task=search}
-    {loadModule mod=product task=menu_responsive}
-  
-</div>
+<div id="loadscreen"></div>
+
+<style type="text/css">
+	#loadscreen{
+		position: absolute;
+		top: 0;
+		display:block;
+		background: #fff url('/images/dash-ring-loading-icon.gif') no-repeat center;
+		width: 100%;
+		height: 100%;
+		z-index: 100
+	}
+</style>
+
+<script type="text/javascript">
+window.onload = function() {
+	var loadscreen = document.getElementById('loadscreen');
+	loadscreen.style.display = 'none';
+};
+</script>
+
 <div class="wrapper">
-  <script type="text/javascript">
-  $(function(){
-    $(window).load(function(){
-      $("#header").sticky({ topSpacing: 0 });
-    });
-  })
-  </script>
   <div class="header pkg" id="header">
     <div class="grid1060">
       <div class="pkg">
@@ -85,5 +97,20 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
   </div>
   <div class="block50"></div>
+
+  <div class="close_menu"></div>
+<div id='cssmenu1' class="menu_left_mobile">
+<div class="pkg login_mobile" >
+
+<div class="login_cart pkg">
+    {loadModule mod=product task=cart_info}
+</div>
+    
+</div>
+	{loadModule mod=product task=category param=responsive}
+</div>
+<div class="menu_show">
+    {loadModule mod=product task=search}
+    {loadModule mod=product task=menu_responsive}
   
-  
+</div>

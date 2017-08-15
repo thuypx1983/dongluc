@@ -108,7 +108,7 @@ $mime	= $size['mime'];
 if (substr($mime, 0, 6) != 'image/')
 {
 	header('HTTP/1.1 400 Bad Request');
-	echo 'Error: requested file is not an accepted type: ' . $docRoot . $image;
+	echo 'Error: requested file is not an accepted type: ' . $docRoot . $image;
 
 	exit();
 }

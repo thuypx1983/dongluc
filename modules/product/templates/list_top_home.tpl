@@ -3,14 +3,14 @@
 	<li>
 		<div class="p-product-wrapper">
 			<div class="p-product-img-wrapper">
-				<a href="{if $row.link_out!=''}{$row.link_out}{else}{$url}{$row.link}-{$row.id}.html{/if}">
-					<img src="{$url}upload/product/thumb/{$row.photo|default:'no-img.jpg'}" />
+				<a href="/san-pham/{$row.id}.html">
+					<img class="lazyload" data-src="{$url}upload/product/thumb/{$row.photo|default:'no-img.jpg'}" />
 				</a>
 			</div>
 			<div class="p-product-info">
-				<div class="p-product-title">
-					<a href="{if $row.link_out!=''}{$row.link_out}{else}{$url}{$row.link}-{$row.id}.html{/if}">{$row.title}</a>
-				</div>
+				<h3 class="p-product-title">
+					<a href="/san-pham/{$row.id}.html">{$row.title}</a>
+				</h3>
 				<div class="p-product-code">
 					Mã: {$row.code}
 				</div>

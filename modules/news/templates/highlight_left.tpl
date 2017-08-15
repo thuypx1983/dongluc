@@ -7,6 +7,7 @@
 				</div>
                 <div class="info-blog-w">
 					<a class="blog-title-link" href="{$url}{$row.pre_link}-{$row.id}.html">{$row.title}</a>
+					<div class="blog-description">{$row.description}</div>
 				</div>
             </li>
         {/foreach}
