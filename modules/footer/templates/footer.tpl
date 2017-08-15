@@ -372,7 +372,7 @@
 
 				$( ".close_menu" ).click(function() {
 					$('.menu_drop_mobile').removeClass('active');
-					$('.close_menu').removeClass('active')
+					$('.close_menu').removeClass('active');
 					$('.menu_left_mobile').removeClass('active_menu');
 					$('.header').removeClass('active_main');
 					$('.menu_show').removeClass('active');

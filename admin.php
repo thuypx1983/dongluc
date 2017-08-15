@@ -1,4 +1,7 @@
 <?php
+define('PATH_ROOT',dirname(__FILE__));
+define('PATH_LIB',PATH_ROOT.DS.'lib');
+include("lib/tcache/tCache.php");
 if (get_magic_quotes_gpc()) {
     $process = array(&$_GET, &$_POST, &$_COOKIE, &$_REQUEST);
     while (list($key, $val) = each($process)) {
@@ -64,4 +67,19 @@ if($_GET['ajax']==true)
 	loadModule($_GET['mod'], $_GET['task']);
 else
 	loadModule("layout");
+
+$task=isset($_GET['task'])?$_GET['task']:'';
+switch ($task){
+  case 'add':
+  case 'edit':
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      tCache::clearAllCache();
+    }
+    break;
+  case 'delete':
+    tCache::clearAllCache();
+    break;
+  default:
+    break;
+}
 ?>

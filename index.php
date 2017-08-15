@@ -1,4 +1,13 @@
 <?php
+define('PATH_ROOT',dirname(__FILE__));
+define('PATH_LIB',PATH_ROOT.DS.'lib');
+include("lib/tcache/tCache.php");
+$tCache=new tCache(0);
+$content=$tCache->getCache();
+if($content!==FALSE){
+	echo $content;
+	exit();
+}
 ini_set("include_path", '/home/dongluc/php:' . ini_get("include_path") );
 if (get_magic_quotes_gpc()) {
     $process = array(&$_GET, &$_POST, &$_COOKIE, &$_REQUEST);
@@ -23,12 +32,12 @@ foreach($_GET as $k=>$v)
 {
 	//echo str_replace("'", "\'", $v);
 	if(!is_array($v))
-		$_GET[$k]= str_replace("'", "\'", $v);	
+		$_GET[$k]= str_replace("'", "\'", $v);
 }
 foreach($_POST as $k=>$v)
 {
 	if(!is_array($v))
-		$_POST[$k]= str_replace("'", "\'", $v);	
+		$_POST[$k]= str_replace("'", "\'", $v);
 }
 
 define("SECTION", "");
@@ -41,6 +50,7 @@ include("lib/Thumbnail/Thumbnail.class.php");
 include("config/phpmailer.php");
 include("config/paging.php");
 include("config/base.class.php");
+include("lib/htmlcompresser.php");
 
 // Permanently 301
 $ex = @explode(SITE_URL, selfURL());
@@ -51,12 +61,12 @@ if ($ex2[0] == 'news')
 	$ex2[1] = trim($ex2[1]);
 	$old_id = $oDb->getOne("SELECT id FROM news WHERE link = '".$ex2[1]."' ");
 	$url_new =  SITE_URL . $ex2[1] . '-' . $old_id . '.html';
-	
+
 	header("HTTP/1.1 301 Moved Permanently");
 	header("Location: " . $url_new);
 }
 
-if($_GET["slang"]!="" && ( $_GET["slang"]=='vi' || $_GET["slang"]=='en' ) ) {	
+if($_GET["slang"]!="" && ( $_GET["slang"]=='vi' || $_GET["slang"]=='en' ) ) {
 	$_SESSION["lang"]= $_GET["slang"];
 } else if($_SESSION["lang"]== "") {
 	$default_code = $oDb->getOne("SELECT code FROM lang WHERE is_default = 1 ");
@@ -75,7 +85,7 @@ if($_SESSION["lang"]=='vi') {
 	define("LINK_ALBUM", "");
 	define("LINK_CATA", "");
 	define("TEXT_HOME", "Trang chủ");
-	
+
 } else if($_SESSION["lang"]=='en') {
 	define("LINK_NEWS", "info");
 	define("LINK_PRODUCT", "product");
@@ -106,17 +116,16 @@ $oSmarty->assign("queryString", $_SERVER["QUERY_STRING"]);
 $config = $oDb->getAssoc("select name, value from configurations");
 $oSmarty->assign("config", $config);
 
+ob_start();
 
 if(isset($_GET['ajax']))
 	loadModule($_GET['mod'], $_GET['task']);
 else
 	loadModule("layout");
-/*
-global  $oDb;
-$oDb->query("ALTER TABLE `ads` ADD `summary` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ,
-ADD `content` LONGTEXT NULL DEFAULT NULL ,
-ADD `seo_title` VARCHAR( 512 ) NULL DEFAULT NULL ,
-ADD `seo_keyword` VARCHAR( 512 ) NULL DEFAULT NULL ,
-ADD `seo_description` VARCHAR( 512 ) NULL DEFAULT NULL ;");
-*/
+
+$html=ob_get_contents();
+ob_end_clean();
+$html=minify_html($html);
+$tCache->setCache($html);
+echo $html;
 ?>

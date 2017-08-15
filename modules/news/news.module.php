@@ -441,10 +441,17 @@ class news extends base
     }
 
     function news_block_sport(){
+      $children=$this->db->getRow("SELECT GROUP_CONCAT(`id`) AS `ids` FROM {$this->table_category} WHERE parent_id=18");
+      $ids=$children['ids'];
+      if($ids){
+        $ids.=',18';
+      }else{
+        $ids.='18';
+      }
         $rows = $this->db->getAll("
 			SELECT id, concat('{$this->pre}', '/', link) as pre_link, title, photo,description FROM {$this->table}
-			{$this->where} AND `news_category_id`=18
-			{$this->order}
+			{$this->where} AND `news_category_id` IN ({$ids})
+			 ORDER BY `id` DESC
 			LIMIT 0,5
 		");
         $this->smarty->assign("rows", $rows);
